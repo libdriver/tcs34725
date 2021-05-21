@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['tcs34725_5faddress_302',['TCS34725_ADDRESS',['../driver__tcs34725_8c.html#a7820ab2667efabd476bda3a28ff7cbe9',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5faihth_303',['TCS34725_REG_AIHTH',['../driver__tcs34725_8c.html#ac01a0008460183201d2ac4a7ecb43ff0',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5faihtl_304',['TCS34725_REG_AIHTL',['../driver__tcs34725_8c.html#a3b618511e6d76ebd6c392f50780ca3e0',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5failth_305',['TCS34725_REG_AILTH',['../driver__tcs34725_8c.html#a8df91cd405d2d2bdcd3eb25ef3e94ab0',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5failtl_306',['TCS34725_REG_AILTL',['../driver__tcs34725_8c.html#ac1fec8d109b3811b7b3df9d3ccd65556',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fatime_307',['TCS34725_REG_ATIME',['../driver__tcs34725_8c.html#a81820604cdc4379f755e323afb238d31',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fbdatah_308',['TCS34725_REG_BDATAH',['../driver__tcs34725_8c.html#ac3f5eee2e25302bea345bf00fb1ec153',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fbdatal_309',['TCS34725_REG_BDATAL',['../driver__tcs34725_8c.html#adf320c6ec38e070f7d942b1813df3991',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fcdatah_310',['TCS34725_REG_CDATAH',['../driver__tcs34725_8c.html#a817ff263dcb249db753fb23f867f6504',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fcdatal_311',['TCS34725_REG_CDATAL',['../driver__tcs34725_8c.html#a1dfa1f0baebee0049b282431d1f53b77',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fclear_312',['TCS34725_REG_CLEAR',['../driver__tcs34725_8c.html#aa80148a1da0ef822fe4014b1afe76b2b',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fconfig_313',['TCS34725_REG_CONFIG',['../driver__tcs34725_8c.html#a0c706735818a1053eae5b81ebf3f0102',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fcontrol_314',['TCS34725_REG_CONTROL',['../driver__tcs34725_8c.html#a759179ba0caeec927c074634e2d42554',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fenable_315',['TCS34725_REG_ENABLE',['../driver__tcs34725_8c.html#a0e84c7911cad0029ef4cac2faaab063d',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fgdatah_316',['TCS34725_REG_GDATAH',['../driver__tcs34725_8c.html#a2f21ed3d3230e9b8097b8ccac3b2e1a1',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fgdatal_317',['TCS34725_REG_GDATAL',['../driver__tcs34725_8c.html#aafcb470770b8226de5d93db53282c743',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fid_318',['TCS34725_REG_ID',['../driver__tcs34725_8c.html#a0a836cec3a7e90b3007d17b9162d8ab5',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fpers_319',['TCS34725_REG_PERS',['../driver__tcs34725_8c.html#a711c12f07a377fc4094961c7ffe6d60b',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5frdatah_320',['TCS34725_REG_RDATAH',['../driver__tcs34725_8c.html#a8053dc0dc4ed3d2ba677e496be2ee5cd',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5frdatal_321',['TCS34725_REG_RDATAL',['../driver__tcs34725_8c.html#a3f7120f7351b84b5329873c36149f581',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fstatus_322',['TCS34725_REG_STATUS',['../driver__tcs34725_8c.html#a1af428b049175e02cfe340186d2a6672',1,'driver_tcs34725.c']]],
+  ['tcs34725_5freg_5fwtime_323',['TCS34725_REG_WTIME',['../driver__tcs34725_8c.html#a39cbb2bd3d848bfb6978453fcc09f540',1,'driver_tcs34725.c']]],
+  ['temperature_5fmax_324',['TEMPERATURE_MAX',['../driver__tcs34725_8c.html#a90c0b20d54005712fcc8cb01281360e9',1,'driver_tcs34725.c']]],
+  ['temperature_5fmin_325',['TEMPERATURE_MIN',['../driver__tcs34725_8c.html#aab353db5bf4eb787f86a2080f609a551',1,'driver_tcs34725.c']]]
+];
