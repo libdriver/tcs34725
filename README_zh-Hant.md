@@ -1,10 +1,12 @@
+[English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md)
+
 <div align=center>
 <img src="/doc/image/logo.png"/>
 </div>
 
 ## LibDriver TCS34725
 
-[English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md)
+[![API](https://img.shields.io/badge/api-reference-blue)](https://www.libdriver.com/docs/tcs34725/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
 TCS34725設備提供紅色、綠色、藍色（RGB）和亮度的光感應值。一個紅外屏蔽過濾器和本地化的顏色傳感光電二極管集成在芯片上，允許進行精確的顏色測量。高靈敏度，寬動態範圍，紅外光譜阻塞濾波器使TCS34725成為理想的顏色傳感器解決方案。 TCS34725顏色傳感器有廣泛的應用包括RGB LED背光控制，固態照明，健康/健身產品、工業過程控制和醫療診斷設備。此外，紅外阻塞濾波器可以使TCS34725執行環境光感應（ALS）。環境光感應廣泛應用於基於顯示的產品，如用手機、筆記本和電視來感知光線環境並啟用最佳觀看效果和省電方案。 TCS34725可以進行低功耗光感測量，進一步降低平均功耗。
 
