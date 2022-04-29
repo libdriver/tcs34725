@@ -35,8 +35,8 @@
  * </table>
  */
 
-#ifndef _DRIVER_TCS34725_INTERRUPT_TEST_H_
-#define _DRIVER_TCS34725_INTERRUPT_TEST_H_
+#ifndef DRIVER_TCS34725_INTERRUPT_TEST_H
+#define DRIVER_TCS34725_INTERRUPT_TEST_H
 
 #include "driver_tcs34725_interface.h"
 

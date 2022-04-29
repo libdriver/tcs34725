@@ -51,7 +51,7 @@ static tcs34725_handle_t gs_handle;        /**< tcs34725 handle */
  */
 uint8_t tcs34725_interrupt_init(tcs34725_interrupt_mode_t mode, uint16_t low_threshold, uint16_t high_threshold)
 {
-    volatile uint8_t res; 
+    uint8_t res; 
     
     /* link interface function */
     DRIVER_TCS34725_LINK_INIT(&gs_handle, tcs34725_handle_t);
@@ -64,7 +64,7 @@ uint8_t tcs34725_interrupt_init(tcs34725_interrupt_mode_t mode, uint16_t low_thr
     
     /* tcs34725 init */
     res = tcs34725_init(&gs_handle);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: init failed.\n");
         
@@ -73,100 +73,100 @@ uint8_t tcs34725_interrupt_init(tcs34725_interrupt_mode_t mode, uint16_t low_thr
     
     /* enable rgbc interrupt */
     res = tcs34725_set_rgbc_interrupt(&gs_handle, TCS34725_BOOL_TRUE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc interrupt failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set wait */
     res = tcs34725_set_wait(&gs_handle, TCS34725_INTERRUPT_DEFAULT_WAIT);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set rgbc */
     res = tcs34725_set_rgbc(&gs_handle, TCS34725_INTERRUPT_DEFAULT_RGBC);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set rgbc integration time */
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTERRUPT_DEFAULT_INTEGRATION_TIME);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set wait time */
     res = tcs34725_set_wait_time(&gs_handle, TCS34725_INTERRUPT_DEFAULT_WAIT_TIME);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set rgbc clear low interrupt threshold */
     res = tcs34725_set_rgbc_clear_low_interrupt_threshold(&gs_handle, low_threshold);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc clear low interrupt threshold failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set rgbc clear high interrupt threshold */
     res = tcs34725_set_rgbc_clear_high_interrupt_threshold(&gs_handle, high_threshold);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc clear high interrupt threshold failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set gain */
     res = tcs34725_set_gain(&gs_handle, TCS34725_INTERRUPT_DEFAULT_GAIN);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set interrupt mode */
     res = tcs34725_set_interrupt_mode(&gs_handle, mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set power on */
     res = tcs34725_set_power_on(&gs_handle, TCS34725_INTERRUPT_DEFAULT_POWER_ON);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set power on failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }  
@@ -188,7 +188,7 @@ uint8_t tcs34725_interrupt_init(tcs34725_interrupt_mode_t mode, uint16_t low_thr
 uint8_t tcs34725_interrupt_read(uint16_t *red, uint16_t *green, uint16_t *blue, uint16_t *clear)
 {
     /* read data */
-    if (tcs34725_read_rgbc(&gs_handle, red, green, blue, clear))
+    if (tcs34725_read_rgbc(&gs_handle, red, green, blue, clear) != 0)
     {
         return 1;
     }
@@ -208,7 +208,7 @@ uint8_t tcs34725_interrupt_read(uint16_t *red, uint16_t *green, uint16_t *blue, 
 uint8_t tcs34725_interrupt_deinit(void)
 {
     /* tcs34725 deinit */
-    if (tcs34725_deinit(&gs_handle))
+    if (tcs34725_deinit(&gs_handle) != 0)
     {
         return 1;
     }

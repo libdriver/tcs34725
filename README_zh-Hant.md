@@ -1,4 +1,4 @@
-[English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md)
+[English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
 <img src="/doc/image/logo.png"/>
@@ -6,11 +6,11 @@
 
 ## LibDriver TCS34725
 
-[![API](https://img.shields.io/badge/api-reference-blue)](https://www.libdriver.com/docs/tcs34725/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
+[![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/tcs34725/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
 TCS34725設備提供紅色、綠色、藍色（RGB）和亮度的光感應值。一個紅外屏蔽過濾器和本地化的顏色傳感光電二極管集成在芯片上，允許進行精確的顏色測量。高靈敏度，寬動態範圍，紅外光譜阻塞濾波器使TCS34725成為理想的顏色傳感器解決方案。 TCS34725顏色傳感器有廣泛的應用包括RGB LED背光控制，固態照明，健康/健身產品、工業過程控制和醫療診斷設備。此外，紅外阻塞濾波器可以使TCS34725執行環境光感應（ALS）。環境光感應廣泛應用於基於顯示的產品，如用手機、筆記本和電視來感知光線環境並啟用最佳觀看效果和省電方案。 TCS34725可以進行低功耗光感測量，進一步降低平均功耗。
 
-LibDriver TCS34725是LibDriver推出的TCS34725全功能驅動，該驅動提供RGB顏色讀取、亮度讀取、亮度中斷檢測等功能。
+LibDriver TCS34725是LibDriver推出的TCS34725全功能驅動，該驅動提供RGB顏色讀取、亮度讀取、亮度中斷檢測等功能並且它符合MISRA標準。
 
 ### 目錄
 
@@ -56,7 +56,7 @@ uint8_t i;
 uint16_t red, green, blue, clear;
 
 res = tcs34725_basic_init();
-if (res)
+if (res != 0)
 {
     return 1;
 }
@@ -67,9 +67,9 @@ for (i = 0; i < 3; i++)
 {
     tcs34725_interface_delay_ms(1000);
     res = tcs34725_basic_read((uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear);
-    if (res)
+    if (res != 0)
     {
-        tcs34725_basic_deinit();
+        (void)tcs34725_basic_deinit();
 
         return 1;
     }
@@ -84,7 +84,7 @@ for (i = 0; i < 3; i++)
 
 ...
 
-tcs34725_basic_deinit();
+(void)tcs34725_basic_deinit();
 
 return 0;
 ```
@@ -103,14 +103,14 @@ void gpio_irq(void)
 }
 
 res = tcs34725_interrupt_init(TCS34725_INTERRUPT_MODE_EVERY_RGBC_CYCLE, 10, 100);
-if (res)
+if (res != 0)
 {
     return 1;
 }
 res = gpio_interrupt_init();
-if (res)
+if (res != 0)
 {
-    tcs34725_interrupt_deinit();
+    (void)tcs34725_interrupt_deinit();
 
     return 1;
 }
@@ -122,11 +122,11 @@ for (i = 0; i < 3; i++)
 {
     tcs34725_interface_delay_ms(1000);
     res = tcs34725_interrupt_read((uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: read data failed.\n");
-        tcs34725_interrupt_deinit();
-        gpio_interrupt_deinit();
+        (void)tcs34725_interrupt_deinit();
+        (void)gpio_interrupt_deinit();
 
         return 1;
     }
@@ -134,7 +134,7 @@ for (i = 0; i < 3; i++)
     tcs34725_interface_debug_print("tcs34725: green is %d.\n", green);
     tcs34725_interface_debug_print("tcs34725: blue is %d.\n", blue);
     tcs34725_interface_debug_print("tcs34725: clear is %d.\n", clear);
-    if (g_flag)
+    if (g_flag != 0)
     {
         tcs34725_interface_debug_print("tcs34725: find interrupt.\n");
 
@@ -147,8 +147,8 @@ for (i = 0; i < 3; i++)
 
 ...
 
-tcs34725_interrupt_deinit();
-gpio_interrupt_deinit();
+(void)tcs34725_interrupt_deinit();
+(void)gpio_interrupt_deinit();
 
 return 0;
 ```

@@ -49,8 +49,8 @@ static tcs34725_handle_t gs_handle;        /**< tcs34725 handle */
  */
 uint8_t tcs34725_read_test(uint32_t times)
 {
-    volatile uint8_t res;
-    volatile uint32_t i;
+    uint8_t res;
+    uint32_t i;
     tcs34725_info_t info;  
     
      /* link interface function */
@@ -64,7 +64,7 @@ uint8_t tcs34725_read_test(uint32_t times)
     
     /* get chip information */
     res = tcs34725_info(&info);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get info failed.\n");
        
@@ -86,7 +86,7 @@ uint8_t tcs34725_read_test(uint32_t times)
     
     /* tcs34725 init */
     res = tcs34725_init(&gs_handle);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: init failed.\n");
        
@@ -98,100 +98,100 @@ uint8_t tcs34725_read_test(uint32_t times)
     
     /* disable rgbc interrupt */
     res = tcs34725_set_rgbc_interrupt(&gs_handle, TCS34725_BOOL_FALSE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc interrupt failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* enable wait */
     res = tcs34725_set_wait(&gs_handle, TCS34725_BOOL_TRUE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* enable rgbc */
     res = tcs34725_set_rgbc(&gs_handle, TCS34725_BOOL_TRUE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set rgbc integration 50 ms */
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_50MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set wait time 2.4 ms */
     res = tcs34725_set_wait_time(&gs_handle, TCS34725_WAIT_TIME_2P4MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set rgbc clear low interrupt threshold 0x0000 */
     res = tcs34725_set_rgbc_clear_low_interrupt_threshold(&gs_handle, 0x0000);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc clear low interrupt threshold failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set rgbc clear high interrupt threshold 0xFFFF */
-    res = tcs34725_set_rgbc_clear_high_interrupt_threshold(&gs_handle, 0xFFFF);
-    if (res)
+    res = tcs34725_set_rgbc_clear_high_interrupt_threshold(&gs_handle, 0xFFFFU);
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc clear high interrupt threshold failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set 1x gain */
     res = tcs34725_set_gain(&gs_handle, TCS34725_GAIN_1X);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set interrupt mode */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_1_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* enable power on */
     res = tcs34725_set_power_on(&gs_handle, TCS34725_BOOL_TRUE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set power on failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -199,25 +199,25 @@ uint8_t tcs34725_read_test(uint32_t times)
     /* set gain 1x */
     tcs34725_interface_debug_print("tcs34725: set 1x gain.\n");
     res = tcs34725_set_gain(&gs_handle, TCS34725_GAIN_1X);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* delay 1000 ms */
     tcs34725_interface_delay_ms(1000);
-    for (i = 0; i<times; i++)
+    for (i = 0; i < times; i++)
     {
-        volatile uint16_t red, green, blue, clear;
+        uint16_t red, green, blue, clear;
         
         /* read data */
-        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear))
+        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear) != 0)
         {
             tcs34725_interface_debug_print("tcs34725: read rgbc failed.\n");
-            tcs34725_deinit(&gs_handle);
+            (void)tcs34725_deinit(&gs_handle);
             
             return 1;
         }
@@ -232,22 +232,22 @@ uint8_t tcs34725_read_test(uint32_t times)
     /* set 4x gain */
     tcs34725_interface_debug_print("tcs34725: set 4x gain.\n");
     res = tcs34725_set_gain(&gs_handle, TCS34725_GAIN_4X);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
-    for (i = 0; i<times; i++)
+    for (i = 0; i < times; i++)
     {
-        volatile uint16_t red, green, blue, clear;
+        uint16_t red, green, blue, clear;
         
         /* read data */
-        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear))
+        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear) != 0)
         {
             tcs34725_interface_debug_print("tcs34725: read rgbc failed.\n");
-            tcs34725_deinit(&gs_handle);
+            (void)tcs34725_deinit(&gs_handle);
             
             return 1;
         }
@@ -262,22 +262,22 @@ uint8_t tcs34725_read_test(uint32_t times)
     /* set 16x gain */
     tcs34725_interface_debug_print("tcs34725: set 16x gain.\n");
     res = tcs34725_set_gain(&gs_handle, TCS34725_GAIN_16X);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
-    for (i = 0; i<times; i++)
+    for (i = 0; i < times; i++)
     {
-        volatile uint16_t red, green, blue, clear;
+        uint16_t red, green, blue, clear;
         
         /* read data */
-        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear))
+        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear) != 0)
         {
             tcs34725_interface_debug_print("tcs34725: read rgbc failed.\n");
-            tcs34725_deinit(&gs_handle);
+            (void)tcs34725_deinit(&gs_handle);
             
             return 1;
         }
@@ -292,22 +292,22 @@ uint8_t tcs34725_read_test(uint32_t times)
     /* set 60x gain */
     tcs34725_interface_debug_print("tcs34725: set 60x gain.\n");
     res = tcs34725_set_gain(&gs_handle, TCS34725_GAIN_60X);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
-    for (i = 0; i<times; i++)
+    for (i = 0; i < times; i++)
     {
-        volatile uint16_t red, green, blue, clear;
+        uint16_t red, green, blue, clear;
         
         /* read data */
-        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear))
+        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear) != 0)
         {
             tcs34725_interface_debug_print("tcs34725: read rgbc failed.\n");
-            tcs34725_deinit(&gs_handle);
+            (void)tcs34725_deinit(&gs_handle);
             
             return 1;
         }
@@ -322,33 +322,33 @@ uint8_t tcs34725_read_test(uint32_t times)
     /* set 16x gain */
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 2.4ms.\n");
     res = tcs34725_set_gain(&gs_handle, TCS34725_GAIN_16X);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set integration time 2.4ms */
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_2P4MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_delay_ms(1000);
-    for (i = 0; i<times; i++)
+    for (i = 0; i < times; i++)
     {
-        volatile uint16_t red, green, blue, clear;
+        uint16_t red, green, blue, clear;
         
         /* read data */
-        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear))
+        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear) != 0)
         {
             tcs34725_interface_debug_print("tcs34725: read rgbc failed.\n");
-            tcs34725_deinit(&gs_handle);
+            (void)tcs34725_deinit(&gs_handle);
             
             return 1;
         }
@@ -362,23 +362,23 @@ uint8_t tcs34725_read_test(uint32_t times)
     /* set integration time 24ms */
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 24ms.\n");
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_24MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_delay_ms(1000);  
-    for (i = 0; i<times; i++)
+    for (i = 0; i < times; i++)
     {
-        volatile uint16_t red, green, blue, clear;
+        uint16_t red, green, blue, clear;
         
         /* read data */
-        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear))
+        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear) != 0)
         {
             tcs34725_interface_debug_print("tcs34725: read rgbc failed.\n");
-            tcs34725_deinit(&gs_handle);
+            (void)tcs34725_deinit(&gs_handle);
             
             return 1;
         }
@@ -392,23 +392,23 @@ uint8_t tcs34725_read_test(uint32_t times)
     /* set integration time 50ms */
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 50ms.\n");
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_50MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_delay_ms(1000);
-    for (i = 0; i<times; i++)
+    for (i = 0; i < times; i++)
     {
-        volatile uint16_t red, green, blue, clear;
+        uint16_t red, green, blue, clear;
         
         /* read data */
-        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear))
+        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear) != 0)
         {
             tcs34725_interface_debug_print("tcs34725: read rgbc failed.\n");
-            tcs34725_deinit(&gs_handle);
+            (void)tcs34725_deinit(&gs_handle);
             
             return 1;
         }
@@ -422,23 +422,23 @@ uint8_t tcs34725_read_test(uint32_t times)
     /* set integration time 101ms */
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 101ms.\n");
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_101MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_delay_ms(1000);
-    for (i = 0; i<times; i++)
+    for (i = 0; i < times; i++)
     {
-        volatile uint16_t red, green, blue, clear;
+        uint16_t red, green, blue, clear;
         
         /* read data */
-        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear))
+        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear) != 0)
         {
             tcs34725_interface_debug_print("tcs34725: read rgbc failed.\n");
-            tcs34725_deinit(&gs_handle);
+            (void)tcs34725_deinit(&gs_handle);
             
             return 1;
         }
@@ -452,23 +452,23 @@ uint8_t tcs34725_read_test(uint32_t times)
     /* set integration time 154ms */
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 154ms.\n");
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_154MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_delay_ms(1000);
-    for (i = 0; i<times; i++)
+    for (i = 0; i < times; i++)
     {
-        volatile uint16_t red, green, blue, clear;
+        uint16_t red, green, blue, clear;
         
         /* read data */
-        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear))
+        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear) != 0)
         {
             tcs34725_interface_debug_print("tcs34725: read rgbc failed.\n");
-            tcs34725_deinit(&gs_handle);
+            (void)tcs34725_deinit(&gs_handle);
             
             return 1;
         }
@@ -482,23 +482,23 @@ uint8_t tcs34725_read_test(uint32_t times)
     /* set integration time 700ms */
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 700ms.\n");
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_700MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_delay_ms(1000);
-    for (i = 0; i<times; i++)
+    for (i = 0; i < times; i++)
     {
-        volatile uint16_t red, green, blue, clear;
+        uint16_t red, green, blue, clear;
         
         /* read data */
-        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear))
+        if (tcs34725_read_rgbc(&gs_handle, (uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear) != 0)
         {
             tcs34725_interface_debug_print("tcs34725: read rgbc failed.\n");
-            tcs34725_deinit(&gs_handle);
+            (void)tcs34725_deinit(&gs_handle);
             
             return 1;
         }
@@ -511,7 +511,7 @@ uint8_t tcs34725_read_test(uint32_t times)
     
     /* finish read test */
     tcs34725_interface_debug_print("tcs34725: finish read test.\n");
-    tcs34725_deinit(&gs_handle);
+    (void)tcs34725_deinit(&gs_handle);
     
     return 0;
 }

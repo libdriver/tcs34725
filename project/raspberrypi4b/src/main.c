@@ -42,7 +42,6 @@
 #include "gpio.h"
 #include <stdlib.h>
 
-
 /**
  * @brief global var definition
  */
@@ -126,7 +125,7 @@ uint8_t tcs34725(uint8_t argc, char **argv)
             if (strcmp("reg", argv[2]) == 0)
             {
                 /* run reg test */
-                if (tcs34725_register_test())
+                if (tcs34725_register_test() != 0)
                 {
                     return 1;
                 }
@@ -157,7 +156,7 @@ uint8_t tcs34725(uint8_t argc, char **argv)
              /* read test */
             if (strcmp("read", argv[2]) == 0)
             {
-                if (tcs34725_read_test(atoi(argv[3])))
+                if (tcs34725_read_test(atoi(argv[3])) != 0)
                 {
                     return 1;
                 }
@@ -180,24 +179,24 @@ uint8_t tcs34725(uint8_t argc, char **argv)
              /* read function */
             if (strcmp("read", argv[2]) == 0)
             {
-                volatile uint8_t res;
-                volatile uint32_t i;
-                volatile uint32_t times;
-                volatile uint16_t red, green, blue, clear;
+                uint8_t res;
+                uint32_t i;
+                uint32_t times;
+                uint16_t red, green, blue, clear;
 
                 res = tcs34725_basic_init();
-                if (res)
+                if (res != 0)
                 {
                     return 1;
                 }
                 times = atoi(argv[3]);
-                for (i=0; i<times; i++)
+                for (i = 0; i < times; i++)
                 {
                     tcs34725_interface_delay_ms(1000);
                     res = tcs34725_basic_read((uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear);
-                    if (res)
+                    if (res != 0)
                     {
-                        tcs34725_basic_deinit();
+                        (void)tcs34725_basic_deinit();
                         
                         return 1;
                     }
@@ -207,7 +206,7 @@ uint8_t tcs34725(uint8_t argc, char **argv)
                     tcs34725_interface_debug_print("tcs34725: blue is %d.\n", blue);
                     tcs34725_interface_debug_print("tcs34725: clear is %d.\n", clear);
                 }
-                tcs34725_basic_deinit();
+                (void)tcs34725_basic_deinit();
                 
                 return 0;
             }
@@ -233,9 +232,8 @@ uint8_t tcs34725(uint8_t argc, char **argv)
              /* read test */
             if (strcmp("int", argv[2]) == 0)
             {
-                volatile uint8_t res;
-                volatile uint32_t times;
-                volatile uint16_t red, green, blue, clear;
+                uint8_t res;
+                uint32_t times;
                 tcs34725_interrupt_mode_t mode;
                 
                 /* check interrupt mode */
@@ -341,18 +339,18 @@ uint8_t tcs34725(uint8_t argc, char **argv)
                 }
                 times = atoi(argv[3]);
                 res = gpio_interrupt_init();
-                if (res)
+                if (res != 0)
                 {
                     return 1;
                 }
-                res = tcs34725_interrupt_test(mode, atoi(argv[7]), atoi(argv[8]), times);
-                if (res)
+                res = tcs34725_interrupt_test(mode, (uint16_t)atoi(argv[7]), (uint16_t)atoi(argv[8]), times);
+                if (res != 0)
                 {
-                    gpio_interrupt_deinit();
+                    (void)gpio_interrupt_deinit();
                     
                     return 1;
                 }
-                gpio_interrupt_deinit();
+                (void)gpio_interrupt_deinit();
                 
                 return 0;
             }
@@ -370,10 +368,10 @@ uint8_t tcs34725(uint8_t argc, char **argv)
              /* read function */
             if (strcmp("int", argv[2]) == 0)
             {
-                volatile uint8_t res;
-                volatile uint32_t i;
-                volatile uint32_t times;
-                volatile uint16_t red, green, blue, clear;
+                uint8_t res;
+                uint32_t i;
+                uint32_t times;
+                uint16_t red, green, blue, clear;
                 tcs34725_interrupt_mode_t mode;
                 
                 /* check interrupt mode */
@@ -478,28 +476,28 @@ uint8_t tcs34725(uint8_t argc, char **argv)
                     return 5;
                 }
                 times = atoi(argv[3]);
-                res = tcs34725_interrupt_init(mode, atoi(argv[7]), atoi(argv[8]));
-                if (res)
+                res = tcs34725_interrupt_init(mode, (uint16_t)atoi(argv[7]), (uint16_t)atoi(argv[8]));
+                if (res != 0)
                 {
                     return 1;
                 }
                 res = gpio_interrupt_init();
-                if (res)
+                if (res != 0)
                 {
-                    tcs34725_interrupt_deinit();
+                    (void)tcs34725_interrupt_deinit();
                     
                     return 1;
                 }
                 g_flag = 0;
-                for (i=0; i<times; i++)
+                for (i = 0; i < times; i++)
                 {
                     tcs34725_interface_delay_ms(1000);
                     res = tcs34725_interrupt_read((uint16_t *)&red, (uint16_t *)&green, (uint16_t *)&blue, (uint16_t *)&clear);
-                    if (res)
+                    if (res != 0)
                     {
                         tcs34725_interface_debug_print("tcs34725: read data failed.\n");
-                        tcs34725_interrupt_deinit();
-                        gpio_interrupt_deinit();
+                        (void)tcs34725_interrupt_deinit();
+                        (void)gpio_interrupt_deinit();
                         
                         return 1;
                     }
@@ -507,15 +505,15 @@ uint8_t tcs34725(uint8_t argc, char **argv)
                     tcs34725_interface_debug_print("tcs34725: green is %d.\n", green);
                     tcs34725_interface_debug_print("tcs34725: blue is %d.\n", blue);
                     tcs34725_interface_debug_print("tcs34725: clear is %d.\n", clear);
-                    if (g_flag)
+                    if (g_flag != 0)
                     {
                         tcs34725_interface_debug_print("tcs34725: find interrupt.\n");
                         
                         break;
                     }
                 }
-                tcs34725_interrupt_deinit();
-                gpio_interrupt_deinit();
+                (void)tcs34725_interrupt_deinit();
+                (void)gpio_interrupt_deinit();
                 
                 return 0;
             }
