@@ -61,10 +61,10 @@ var driver__tcs34725_8h =
     [ "tcs34725_get_rgbc", "group__tcs34725__base__driver.html#ga953658c229a2858e1931061e8b46a7f4", null ],
     [ "tcs34725_get_rgbc_clear_high_interrupt_threshold", "group__tcs34725__interrupt__driver.html#ga150ee4a10bb63faeebece23528bc0774", null ],
     [ "tcs34725_get_rgbc_clear_low_interrupt_threshold", "group__tcs34725__interrupt__driver.html#ga26a6710fa01a86f75b693bb3a5355b6d", null ],
-    [ "tcs34725_get_rgbc_integration_time", "group__tcs34725__base__driver.html#ga7d149e33cd026925a33c04fb4ff1b10a", null ],
+    [ "tcs34725_get_rgbc_integration_time", "group__tcs34725__base__driver.html#gaf47d1a4d062000d4d18492a8b10cdcd6", null ],
     [ "tcs34725_get_rgbc_interrupt", "group__tcs34725__interrupt__driver.html#ga2f440fd59b8fa20bb7adfdde99bfa22b", null ],
     [ "tcs34725_get_wait", "group__tcs34725__base__driver.html#ga6e6143eb30f1ab9d13e6a14445b74e3b", null ],
-    [ "tcs34725_get_wait_time", "group__tcs34725__base__driver.html#ga2ea5bfd0cb1f9abc1c91a76bd9b32e5d", null ],
+    [ "tcs34725_get_wait_time", "group__tcs34725__base__driver.html#ga61af1711e683883f81b6f5fa07e44b41", null ],
     [ "tcs34725_info", "group__tcs34725__base__driver.html#ga954f6e12438dc1d9f9b3d7b4247e08db", null ],
     [ "tcs34725_init", "group__tcs34725__base__driver.html#gad2ae1ca28c0c3dc58431b34e19d3a4b8", null ],
     [ "tcs34725_read_c", "group__tcs34725__base__driver.html#gaf426a9a8f4fbd78a4943d8ab61cc4b2f", null ],
@@ -77,8 +77,8 @@ var driver__tcs34725_8h =
     [ "tcs34725_set_rgbc", "group__tcs34725__base__driver.html#ga3f674d175b480a822bd8256112c9d017", null ],
     [ "tcs34725_set_rgbc_clear_high_interrupt_threshold", "group__tcs34725__interrupt__driver.html#ga20f7ba8966a24b52e71f02d2dfa211d5", null ],
     [ "tcs34725_set_rgbc_clear_low_interrupt_threshold", "group__tcs34725__interrupt__driver.html#ga9c75f624815e518b8b38ac7a79107b76", null ],
-    [ "tcs34725_set_rgbc_integration_time", "group__tcs34725__base__driver.html#ga68b6f7d7cb7faeacb13c099a153c6961", null ],
+    [ "tcs34725_set_rgbc_integration_time", "group__tcs34725__base__driver.html#ga01fee12807249b7f58a19a9667442820", null ],
     [ "tcs34725_set_rgbc_interrupt", "group__tcs34725__interrupt__driver.html#ga475f1dc64a5344014e50082cfa04ce77", null ],
     [ "tcs34725_set_wait", "group__tcs34725__base__driver.html#gaf3b0b8760af0644b77175b51a566e3d1", null ],
-    [ "tcs34725_set_wait_time", "group__tcs34725__base__driver.html#ga7e78721ccfd57b7db23bf3d2604a3ef7", null ]
+    [ "tcs34725_set_wait_time", "group__tcs34725__base__driver.html#ga4970d44ebeb1ad7d760cd660e123e219", null ]
 ];

@@ -49,11 +49,11 @@ static tcs34725_handle_t gs_handle;        /**< tcs34725 handle */
  */
 uint8_t tcs34725_register_test(void)
 {
-    volatile uint8_t res;
-    volatile uint16_t reg_in, reg_out;
+    uint8_t res;
+    uint16_t reg_in, reg_out;
     tcs34725_info_t info;  
     tcs34725_bool_t enable;
-    tcs34725_integration_time_t time;    
+    tcs34725_integration_time_t t;
     tcs34725_wait_time_t wait_time;
     tcs34725_gain_t gain;
     tcs34725_interrupt_mode_t mode;
@@ -69,7 +69,7 @@ uint8_t tcs34725_register_test(void)
     
     /* get chip information */
     res = tcs34725_info(&info);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get info failed.\n");
        
@@ -91,7 +91,7 @@ uint8_t tcs34725_register_test(void)
     
     /* tcs34725 init */
     res = tcs34725_init(&gs_handle);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: init failed.\n");
        
@@ -106,19 +106,19 @@ uint8_t tcs34725_register_test(void)
     
     /* enable interrupt */
     res = tcs34725_set_rgbc_interrupt(&gs_handle, TCS34725_BOOL_TRUE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc interrupt failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc interrupt enable.\n");
     res = tcs34725_get_rgbc_interrupt(&gs_handle, &enable);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc interrupt failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -126,19 +126,19 @@ uint8_t tcs34725_register_test(void)
     
     /* disable interrupt */
     res = tcs34725_set_rgbc_interrupt(&gs_handle, TCS34725_BOOL_FALSE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc interrupt failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc interrupt disable.\n");
     res = tcs34725_get_rgbc_interrupt(&gs_handle, &enable);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc interrupt failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -149,19 +149,19 @@ uint8_t tcs34725_register_test(void)
     
     /* enable wait */
     res = tcs34725_set_wait(&gs_handle, TCS34725_BOOL_TRUE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set wait enable.\n");
     res = tcs34725_get_wait(&gs_handle, &enable);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get wait failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -169,19 +169,19 @@ uint8_t tcs34725_register_test(void)
     
     /* disable wait */
     res = tcs34725_set_wait(&gs_handle, TCS34725_BOOL_FALSE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set wait disable.\n");
     res = tcs34725_get_wait(&gs_handle, &enable);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get wait failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -192,19 +192,19 @@ uint8_t tcs34725_register_test(void)
     
     /* enable rgbc */
     res = tcs34725_set_rgbc(&gs_handle, TCS34725_BOOL_TRUE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc enable.\n");
     res = tcs34725_get_rgbc(&gs_handle, &enable);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -212,19 +212,19 @@ uint8_t tcs34725_register_test(void)
     
     /* disable rgbc */
     res = tcs34725_set_rgbc(&gs_handle, TCS34725_BOOL_FALSE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc disable.\n");
     res = tcs34725_get_rgbc(&gs_handle, &enable);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -235,19 +235,19 @@ uint8_t tcs34725_register_test(void)
     
     /* enable power on */
     res = tcs34725_set_power_on(&gs_handle, TCS34725_BOOL_TRUE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set power on failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set power on enable.\n");
     res = tcs34725_get_power_on(&gs_handle, &enable);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get power on failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -255,19 +255,19 @@ uint8_t tcs34725_register_test(void)
     
     /* disable power on */
     res = tcs34725_set_power_on(&gs_handle, TCS34725_BOOL_FALSE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set power on failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set power on disable.\n");
     res = tcs34725_get_power_on(&gs_handle, &enable);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get power on failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -278,144 +278,144 @@ uint8_t tcs34725_register_test(void)
     
     /* set integration time 2.4ms */
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_2P4MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 2.4ms.\n");
-    res = tcs34725_get_rgbc_integration_time(&gs_handle, &time);
-    if (res)
+    res = tcs34725_get_rgbc_integration_time(&gs_handle, &t);
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
-    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", time==TCS34725_INTEGRATION_TIME_2P4MS?"ok":"error"); 
+    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", t==TCS34725_INTEGRATION_TIME_2P4MS?"ok":"error"); 
     
     /* set integration time 24ms */
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_24MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     
     /* set integration time 24ms */
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 24ms.\n");
-    res = tcs34725_get_rgbc_integration_time(&gs_handle, &time);
-    if (res)
+    res = tcs34725_get_rgbc_integration_time(&gs_handle, &t);
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
-    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", time==TCS34725_INTEGRATION_TIME_24MS?"ok":"error"); 
+    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", t==TCS34725_INTEGRATION_TIME_24MS?"ok":"error"); 
     
     /* set integration time 50ms */
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_50MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 50ms.\n");
-    res = tcs34725_get_rgbc_integration_time(&gs_handle, &time);
-    if (res)
+    res = tcs34725_get_rgbc_integration_time(&gs_handle, &t);
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
-    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", time==TCS34725_INTEGRATION_TIME_50MS?"ok":"error");     
+    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", t==TCS34725_INTEGRATION_TIME_50MS?"ok":"error");     
     
     /* set integration time 101ms */
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_101MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 101ms.\n");
-    res = tcs34725_get_rgbc_integration_time(&gs_handle, &time);
-    if (res)
+    res = tcs34725_get_rgbc_integration_time(&gs_handle, &t);
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
-    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", time==TCS34725_INTEGRATION_TIME_101MS?"ok":"error");       
+    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", t==TCS34725_INTEGRATION_TIME_101MS?"ok":"error");       
     
     /* set integration time 154ms */
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_154MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 154ms.\n");
-    res = tcs34725_get_rgbc_integration_time(&gs_handle, &time);
-    if (res)
+    res = tcs34725_get_rgbc_integration_time(&gs_handle, &t);
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
-    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", time==TCS34725_INTEGRATION_TIME_154MS?"ok":"error");      
+    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", t==TCS34725_INTEGRATION_TIME_154MS?"ok":"error");      
     
     /* set integration time 700ms */
     res = tcs34725_set_rgbc_integration_time(&gs_handle, TCS34725_INTEGRATION_TIME_700MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc integration time 700ms.\n");
-    res = tcs34725_get_rgbc_integration_time(&gs_handle, &time);
-    if (res)
+    res = tcs34725_get_rgbc_integration_time(&gs_handle, &t);
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc integration time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
-    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", time==TCS34725_INTEGRATION_TIME_700MS?"ok":"error");           
+    tcs34725_interface_debug_print("tcs34725: check rgbc integration time %s.\n", t==TCS34725_INTEGRATION_TIME_700MS?"ok":"error");           
     
     /* tcs34725_set_wait_time/tcs34725_get_wait_time test */
     tcs34725_interface_debug_print("tcs34725: tcs34725_set_wait_time/tcs34725_get_wait_time test.\n");
     
     /* set wait time 2.4ms */
     res = tcs34725_set_wait_time(&gs_handle, TCS34725_WAIT_TIME_2P4MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set wait time 2.4ms.\n");
     res = tcs34725_get_wait_time(&gs_handle, &wait_time);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -423,19 +423,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set wait time 204ms */
     res = tcs34725_set_wait_time(&gs_handle, TCS34725_WAIT_TIME_204MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set wait time 204ms.\n");
     res = tcs34725_get_wait_time(&gs_handle, &wait_time);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -443,19 +443,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set wait time 614ms */
     res = tcs34725_set_wait_time(&gs_handle, TCS34725_WAIT_TIME_614MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set wait time 614ms.\n");
     res = tcs34725_get_wait_time(&gs_handle, &wait_time);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -463,19 +463,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set wait time 29ms */
     res = tcs34725_set_wait_time(&gs_handle, TCS34725_WAIT_TIME_29MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set wait time 29ms.\n");
     res = tcs34725_get_wait_time(&gs_handle, &wait_time);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -483,19 +483,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set wait time 2450ms */
     res = tcs34725_set_wait_time(&gs_handle, TCS34725_WAIT_TIME_2450MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set wait time 2450ms.\n");
     res = tcs34725_get_wait_time(&gs_handle, &wait_time);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -503,19 +503,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set wait time 7400ms */
     res = tcs34725_set_wait_time(&gs_handle, TCS34725_WAIT_TIME_7400MS);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set wait time 7400ms.\n");
     res = tcs34725_get_wait_time(&gs_handle, &wait_time);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get wait time failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -525,19 +525,19 @@ uint8_t tcs34725_register_test(void)
     tcs34725_interface_debug_print("tcs34725: tcs34725_set_rgbc_clear_low_interrupt_threshold/tcs34725_get_rgbc_clear_low_interrupt_threshold test.\n");
     reg_in = rand()%65535;
     res = tcs34725_set_rgbc_clear_low_interrupt_threshold(&gs_handle, reg_in);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc clear low interrupt threshold failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc clear low interrupt threshold 0x%04X.\n", reg_in);
     res = tcs34725_get_rgbc_clear_low_interrupt_threshold(&gs_handle, (uint16_t *)&reg_out);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc clear low interrupt threshold  failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -547,19 +547,19 @@ uint8_t tcs34725_register_test(void)
     tcs34725_interface_debug_print("tcs34725: tcs34725_set_rgbc_clear_high_interrupt_threshold/tcs34725_get_rgbc_clear_high_interrupt_threshold test.\n");
     reg_in = rand()%65535;
     res = tcs34725_set_rgbc_clear_high_interrupt_threshold(&gs_handle, reg_in);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set rgbc clear high interrupt threshold failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set rgbc clear high interrupt threshold 0x%04X.\n", reg_in);
     res = tcs34725_get_rgbc_clear_high_interrupt_threshold(&gs_handle, (uint16_t *)&reg_out);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get rgbc clear high interrupt threshold  failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -570,19 +570,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set gain 1x */
     res = tcs34725_set_gain(&gs_handle, TCS34725_GAIN_1X);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set gain 1x.\n");
     res = tcs34725_get_gain(&gs_handle, &gain);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -590,19 +590,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set gain 4x */
     res = tcs34725_set_gain(&gs_handle, TCS34725_GAIN_4X);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set gain 4x.\n");
     res = tcs34725_get_gain(&gs_handle, &gain);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -610,19 +610,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set gain 16x */
     res = tcs34725_set_gain(&gs_handle, TCS34725_GAIN_16X);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set gain 16x.\n");
     res = tcs34725_get_gain(&gs_handle, &gain);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -630,19 +630,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set gain 60x */
     res = tcs34725_set_gain(&gs_handle, TCS34725_GAIN_60X);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set gain 60x.\n");
     res = tcs34725_get_gain(&gs_handle, &gain);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get gain failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -653,19 +653,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode every rgbc cycle */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_EVERY_RGBC_CYCLE);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode every rgbc cycle.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -673,19 +673,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 1 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_1_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 1 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -693,19 +693,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 2 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_2_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 2 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -713,19 +713,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 3 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_3_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 3 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -733,19 +733,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 5 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_5_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 5 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -753,19 +753,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 10 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_10_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 10 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -773,19 +773,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 15 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_15_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 15 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -793,19 +793,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 20 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_20_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 20 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -813,19 +813,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 25 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_25_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 25 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -833,19 +833,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 30 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_30_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 30 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -853,19 +853,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 35 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_35_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 35 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -873,19 +873,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 40 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_40_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 40 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -893,19 +893,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 45 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_45_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 45 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -913,19 +913,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 50 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_50_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 50 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -933,19 +933,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 55 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_55_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 55 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -953,19 +953,19 @@ uint8_t tcs34725_register_test(void)
     
     /* set interrupt mode 60 clear out of threshold */
     res = tcs34725_set_interrupt_mode(&gs_handle, TCS34725_INTERRUPT_MODE_60_CLEAR_CHANNEL_OUT_OF_THRESHOLD);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: set interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
     tcs34725_interface_debug_print("tcs34725: set interrupt mode 60 clear out of threshold.\n");
     res = tcs34725_get_interrupt_mode(&gs_handle, &mode);
-    if (res)
+    if (res != 0)
     {
         tcs34725_interface_debug_print("tcs34725: get interrupt mode failed.\n");
-        tcs34725_deinit(&gs_handle);
+        (void)tcs34725_deinit(&gs_handle);
         
         return 1;
     }
@@ -973,7 +973,7 @@ uint8_t tcs34725_register_test(void)
     
     /* finish register test */
     tcs34725_interface_debug_print("tcs34725: finish register test.\n");
-    tcs34725_deinit(&gs_handle);
+    (void)tcs34725_deinit(&gs_handle);
     
     return 0;
 }

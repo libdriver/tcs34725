@@ -35,8 +35,8 @@
  * </table>
  */
 
-#ifndef _DRIVER_TCS34725_H_
-#define _DRIVER_TCS34725_H_
+#ifndef DRIVER_TCS34725_H
+#define DRIVER_TCS34725_H
 
 #include <stdio.h>
 #include <stdint.h>
@@ -154,7 +154,7 @@ typedef struct tcs34725_handle_s
     uint8_t (*iic_read)(uint8_t addr, uint8_t reg, uint8_t *buf, uint16_t len);         /**< point to a iic_read function address */
     uint8_t (*iic_write)(uint8_t addr, uint8_t reg, uint8_t *buf, uint16_t len);        /**< point to a iic_write function address */
     void (*delay_ms)(uint32_t ms);                                                      /**< point to a delay_ms function address */
-    uint16_t (*debug_print)(char *fmt, ...);                                            /**< point to a debug_print function address */
+    void (*debug_print)(const char *const fmt, ...);                                    /**< point to a debug_print function address */
     uint8_t  inited;                                                                    /**< inited flag */
 } tcs34725_handle_t;
 
@@ -411,7 +411,7 @@ uint8_t tcs34725_get_power_on(tcs34725_handle_t *handle, tcs34725_bool_t *enable
 /**
  * @brief     set the rgbc adc integration time
  * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] time is the adc integration time
+ * @param[in] t is the adc integration time
  * @return    status code
  *            - 0 success
  *            - 1 set rgbc integration time failed
@@ -419,12 +419,12 @@ uint8_t tcs34725_get_power_on(tcs34725_handle_t *handle, tcs34725_bool_t *enable
  *            - 3 handle is not initialized
  * @note      none
  */
-uint8_t tcs34725_set_rgbc_integration_time(tcs34725_handle_t *handle, tcs34725_integration_time_t time);
+uint8_t tcs34725_set_rgbc_integration_time(tcs34725_handle_t *handle, tcs34725_integration_time_t t);
 
 /**
  * @brief      get the rgbc adc integration time
  * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *time points to a integration time buffer
+ * @param[out] *t points to a integration time buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rgbc integration time failed
@@ -432,12 +432,12 @@ uint8_t tcs34725_set_rgbc_integration_time(tcs34725_handle_t *handle, tcs34725_i
  *             - 3 handle is not initialized
  * @note       none
  */
-uint8_t tcs34725_get_rgbc_integration_time(tcs34725_handle_t *handle, tcs34725_integration_time_t *time);
+uint8_t tcs34725_get_rgbc_integration_time(tcs34725_handle_t *handle, tcs34725_integration_time_t *t);
 
 /**
  * @brief     set the wait time
  * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] time is the wait time
+ * @param[in] t is the wait time
  * @return    status code
  *            - 0 success
  *            - 1 set wait time failed
@@ -445,12 +445,12 @@ uint8_t tcs34725_get_rgbc_integration_time(tcs34725_handle_t *handle, tcs34725_i
  *            - 3 handle is not initialized
  * @note      none
  */
-uint8_t tcs34725_set_wait_time(tcs34725_handle_t *handle, tcs34725_wait_time_t time);
+uint8_t tcs34725_set_wait_time(tcs34725_handle_t *handle, tcs34725_wait_time_t t);
 
 /**
  * @brief      get the wait time
  * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *time points to a wait time buffer
+ * @param[out] *t points to a wait time buffer
  * @return     status code
  *             - 0 success
  *             - 1 get wait time failed
@@ -458,7 +458,7 @@ uint8_t tcs34725_set_wait_time(tcs34725_handle_t *handle, tcs34725_wait_time_t t
  *             - 3 handle is not initialized
  * @note       none
  */
-uint8_t tcs34725_get_wait_time(tcs34725_handle_t *handle, tcs34725_wait_time_t *time);
+uint8_t tcs34725_get_wait_time(tcs34725_handle_t *handle, tcs34725_wait_time_t *t);
 
 /**
  * @brief     set the adc gain

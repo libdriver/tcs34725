@@ -35,8 +35,8 @@
  * </table>
  */
 
-#ifndef _DRIVER_TCS34725_BASIC_H_
-#define _DRIVER_TCS34725_BASIC_H_
+#ifndef DRIVER_TCS34725_BASIC_H
+#define DRIVER_TCS34725_BASIC_H
 
 #include "driver_tcs34725_interface.h"
 
@@ -59,8 +59,8 @@ extern "C"{
 #define TCS34725_BASIC_DEFAULT_RGBC                                  TCS34725_BOOL_TRUE                                        /**< enable rgbc */
 #define TCS34725_BASIC_DEFAULT_INTEGRATION_TIME                      TCS34725_INTEGRATION_TIME_50MS                            /**< 50 ms integration time */
 #define TCS34725_BASIC_DEFAULT_WAIT_TIME                             TCS34725_WAIT_TIME_2P4MS                                  /**< 2.4 ms wait time */
-#define TCS34725_BASIC_DEFAULT_CLEAR_LOW_INTERRUPT_THRESHOLD         0x0000                                                    /**< 0x0000 low interrupt threshold */
-#define TCS34725_BASIC_DEFAULT_CLEAR_HIGH_INTERRUPT_THRESHOLD        0xFFFF                                                    /**< 0xFFFF high interrupt threshold */
+#define TCS34725_BASIC_DEFAULT_CLEAR_LOW_INTERRUPT_THRESHOLD         0x0000U                                                   /**< 0x0000 low interrupt threshold */
+#define TCS34725_BASIC_DEFAULT_CLEAR_HIGH_INTERRUPT_THRESHOLD        0xFFFFU                                                   /**< 0xFFFF high interrupt threshold */
 #define TCS34725_BASIC_DEFAULT_GAIN                                  TCS34725_GAIN_16X                                         /**< 16x gain */
 #define TCS34725_BASIC_DEFAULT_INTERRUPT_MODE                        TCS34725_INTERRUPT_MODE_1_CLEAR_CHANNEL_OUT_OF_THRESHOLD  /**< 1 clear out of threshold */
 #define TCS34725_BASIC_DEFAULT_POWER_ON                              TCS34725_BOOL_TRUE                                        /**< enable power on */
