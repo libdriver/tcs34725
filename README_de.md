@@ -28,15 +28,15 @@ Libdriver TCS34725 ist ein voll funktionsfähiger Treiber von TCS34725, der von 
 
 /src enthält LibDriver TCS34725-Quelldateien.
 
-/interface enthält die plattformunabhängige Vorlage LibDriver TCS34725 IIC。
+/interface enthält die plattformunabhängige Vorlage LibDriver TCS34725 IIC.
 
-/test enthält den Testcode des LibDriver TCS34725-Treibers und dieser Code kann die erforderliche Funktion des Chips einfach testen。
+/test enthält den Testcode des LibDriver TCS34725-Treibers und dieser Code kann die erforderliche Funktion des Chips einfach testen.
 
 /example enthält LibDriver TCS34725-Beispielcode.
 
 /doc enthält das LibDriver TCS34725-Offlinedokument.
 
-/Datenblatt enthält TCS34725-Datenblatt。
+/Datenblatt enthält TCS34725-Datenblatt.
 
 /project enthält den allgemeinen Beispielcode für Linux- und MCU-Entwicklungsboards. Alle Projekte verwenden das Shell-Skript, um den Treiber zu debuggen, und die detaillierten Anweisungen finden Sie in der README.md jedes Projekts.
 
