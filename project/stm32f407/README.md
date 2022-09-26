@@ -1,6 +1,6 @@
-### 1. chip
+### 1. Chip
 
-#### 1.1 chip info
+#### 1.1 Chip Info
 
 chip name : STM32F407ZGT6.
 
@@ -12,23 +12,23 @@ iic pin: SCL/SDA PB8/PB9.
 
 gpio pin: INT PB0.
 
-### 2. shell
+### 2. Shell
 
-#### 2.1 shell parameter
+#### 2.1 Shell Parameter
 
-baud rate: 115200
+baud rate: 115200.
 
-data bits : 8
+data bits : 8.
 
-stop bits: 1
+stop bits: 1.
 
-parity: none
+parity: none.
 
-flow control: none
+flow control: none.
 
-### 3. tcs34725
+### 3. TCS34725
 
-#### 3.1 command Instruction
+#### 3.1 Command Instruction
 
 ​          tcs34725 is a basic command which can test all tcs34725 driver function:
 
@@ -52,7 +52,7 @@ flow control: none
 
 ​           -c int <times> -m (0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60) -th <lowthreshold> <highthreshold>        run interrupt function. times means read times. lowthreshold means interrupt low threshold. highthreshold means interrupt high threshold.
 
-#### 3.2 command example
+#### 3.2 Command Example
 
 ```shell
 tcs34725 -i
