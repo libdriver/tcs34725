@@ -51,6 +51,8 @@ LibDriver TCS34725是LibDriver推出的TCS34725全功能驅動，該驅動提供
 #### example basic
 
 ```C
+#include "driver_tcs34725_basic.h"
+
 uint8_t res;
 uint8_t i;
 uint16_t red, green, blue, clear;
@@ -92,6 +94,8 @@ return 0;
 #### example interrupt
 
 ```C
+#include "driver_tcs34725_interrupt.h"
+
 uint8_t res;
 uint8_t i;
 uint16_t red, green, blue, clear;

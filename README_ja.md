@@ -51,6 +51,8 @@ Libdriver TCS34725は、LibDriverによって起動されたTCS34725の全機能
 #### example basic
 
 ```C
+#include "driver_tcs34725_basic.h"
+
 uint8_t res;
 uint8_t i;
 uint16_t red, green, blue, clear;
@@ -92,6 +94,8 @@ return 0;
 #### example interrupt
 
 ```c
+#include "driver_tcs34725_interrupt.h"
+
 uint8_t res;
 uint8_t i;
 uint16_t red, green, blue, clear;

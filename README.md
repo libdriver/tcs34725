@@ -28,15 +28,15 @@ Libdriver TCS34725 is a full function driver of TCS34725 launched by LibDriver.I
 
 /src includes LibDriver TCS34725 source files.
 
-/interface includes LibDriver TCS34725 IIC platform independent template。
+/interface includes LibDriver TCS34725 IIC platform independent template.
 
-/test includes LibDriver TCS34725 driver test code and this code can test the chip necessary function simply。
+/test includes LibDriver TCS34725 driver test code and this code can test the chip necessary function simply.
 
 /example includes LibDriver TCS34725 sample code.
 
 /doc includes LibDriver TCS34725 offline document.
 
-/datasheet includes TCS34725 datasheet。
+/datasheet includes TCS34725 datasheet.
 
 /project includes the common Linux and MCU development board sample code. All projects use the shell script to debug the driver and the detail instruction can be found in each project's README.md.
 
@@ -51,6 +51,8 @@ Add /src, /interface and /example to your project.
 #### example basic
 
 ```C
+#include "driver_tcs34725_basic.h"
+
 uint8_t res;
 uint8_t i;
 uint16_t red, green, blue, clear;
@@ -92,6 +94,8 @@ return 0;
 #### example interrupt
 
 ```C
+#include "driver_tcs34725_interrupt.h"
+
 uint8_t res;
 uint8_t i;
 uint16_t red, green, blue, clear;
