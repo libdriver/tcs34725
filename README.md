@@ -10,7 +10,7 @@
 
 The TCS34725 device provides a digital return of red, green, blue (RGB), and clear light sensing values. An IR blocking filter, integrated on-chip and localized to the color sensing photodiodes, minimizes the IR spectral component of the incoming light and allows color measurements to be made accurately. The high sensitivity, wide dynamic range, and IR blocking filter make the TCS34725 an ideal color sensor solution for use under varying lighting conditions and through attenuating materials. The TCS34725 color sensor has a wide range of applications including RGB LED backlight control, solid-state lighting, health/fitness products, industrial process controls and medical diagnostic equipment. In addition, the IR blocking filter enables the TCS34725 to perform ambient light sensing (ALS). Ambient light sensing is widely used in display-based products such as cell phones, notebooks, and TVs to sense the lighting environment and enable automatic display brightness for optimal viewing and power savings. The TCS34725, itself, can enter a lower-power wait state between light sensing measurements to further reduce the average power consumption.
 
-Libdriver TCS34725 is a full function driver of TCS34725 launched by LibDriver.It provides RGB color reading, brightness reading, brightness interrupt detection and other functions. LibDriver is MISRA compliant.
+LibDriver TCS34725 is a full function driver of TCS34725 launched by LibDriver.It provides RGB color reading, brightness reading, brightness interrupt detection and other functions. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
