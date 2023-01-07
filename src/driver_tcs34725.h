@@ -149,10 +149,10 @@ typedef enum
  */
 typedef struct tcs34725_handle_s
 {
-    uint8_t (*iic_init)(void);                                                          /**< point to a iic_init function address */
-    uint8_t (*iic_deinit)(void);                                                        /**< point to a iic_deinit function address */
-    uint8_t (*iic_read)(uint8_t addr, uint8_t reg, uint8_t *buf, uint16_t len);         /**< point to a iic_read function address */
-    uint8_t (*iic_write)(uint8_t addr, uint8_t reg, uint8_t *buf, uint16_t len);        /**< point to a iic_write function address */
+    uint8_t (*iic_init)(void);                                                          /**< point to an iic_init function address */
+    uint8_t (*iic_deinit)(void);                                                        /**< point to an iic_deinit function address */
+    uint8_t (*iic_read)(uint8_t addr, uint8_t reg, uint8_t *buf, uint16_t len);         /**< point to an iic_read function address */
+    uint8_t (*iic_write)(uint8_t addr, uint8_t reg, uint8_t *buf, uint16_t len);        /**< point to an iic_write function address */
     void (*delay_ms)(uint32_t ms);                                                      /**< point to a delay_ms function address */
     void (*debug_print)(const char *const fmt, ...);                                    /**< point to a debug_print function address */
     uint8_t  inited;                                                                    /**< inited flag */
@@ -196,7 +196,7 @@ typedef struct tcs34725_info_s
 /**
  * @brief     link iic_init function
  * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] FUC points to a iic_init function address
+ * @param[in] FUC points to an iic_init function address
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_IIC_INIT(HANDLE, FUC)    (HANDLE)->iic_init = FUC
@@ -204,7 +204,7 @@ typedef struct tcs34725_info_s
 /**
  * @brief     link iic_deinit function
  * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] FUC points to a iic_deinit function address
+ * @param[in] FUC points to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_IIC_DEINIT(HANDLE, FUC)  (HANDLE)->iic_deinit = FUC
@@ -212,7 +212,7 @@ typedef struct tcs34725_info_s
 /**
  * @brief     link iic_read function
  * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] FUC points to a iic_read function address
+ * @param[in] FUC points to an iic_read function address
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_IIC_READ(HANDLE, FUC)    (HANDLE)->iic_read = FUC
@@ -220,7 +220,7 @@ typedef struct tcs34725_info_s
 /**
  * @brief     link iic_write function
  * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] FUC points to a iic_write function address
+ * @param[in] FUC points to an iic_write function address
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_IIC_WRITE(HANDLE, FUC)   (HANDLE)->iic_write = FUC
@@ -424,7 +424,7 @@ uint8_t tcs34725_set_rgbc_integration_time(tcs34725_handle_t *handle, tcs34725_i
 /**
  * @brief      get the rgbc adc integration time
  * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *t points to a integration time buffer
+ * @param[out] *t points to an integration time buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rgbc integration time failed
@@ -476,7 +476,7 @@ uint8_t tcs34725_set_gain(tcs34725_handle_t *handle, tcs34725_gain_t gain);
 /**
  * @brief      get the adc gain
  * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *gain points to a adc gain buffer
+ * @param[out] *gain points to an adc gain buffer
  * @return     status code
  *             - 0 success
  *             - 1 get gain failed
@@ -539,7 +539,7 @@ uint8_t tcs34725_set_interrupt_mode(tcs34725_handle_t *handle, tcs34725_interrup
 /**
  * @brief      get the interrupt mode
  * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *mode points to a interrupt mode buffer
+ * @param[out] *mode points to an interrupt mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt mode failed

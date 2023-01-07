@@ -1,12 +1,12 @@
-### 1. Chip
+### 1. Board
 
-#### 1.1 Chip Info
+#### 1.1 Board Info
 
-chip name : Raspberry Pi 4B.
+Board Name: Raspberry Pi 4B.
 
-iic pin: SCL/SDA GPIO3/GPIO2.
+IIC Pin: SCL/SDA GPIO3/GPIO2.
 
-gpio pin: INT GPIO17.
+GPIO Pin: INT GPIO17.
 
 ### 2. Install
 
@@ -72,32 +72,61 @@ Find the compiled library in CMake.
 find_package(tcs34725 REQUIRED)
 ```
 
+#### 2.4 INT Pin
+
+INT pin need a 4.3KΩ resistor connect to 5V.
 
 ### 3. TCS34725
 
 #### 3.1 Command Instruction
 
-​          tcs34725 is a basic command which can test all tcs34725 driver function:
+1. Show tcs34725 chip and driver information.
 
-​           -i        show tcs34725 chip and driver information.
+   ```shell
+   tcs34725 (-i | --information)
+   ```
 
-​           -h      show tcs34725 help.
+2. Show tcs34725 help.
 
-​           -p      show tcs34725 pin connections of the current board.
+   ```shell
+   tcs34725 (-h | --help)
+   ```
 
-​           -t (reg | read <times> | int <times> -m (0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60) -th <lowthreshold> <highthreshold>)
+3. Show tcs34725 pin connections of the current board.
 
-​           -t reg        run register test.
+   ```shell
+   tcs34725 (-p | --port)
+   ```
 
-​           -t read <times>        run read test. times means test times.  
+4. Run register test.
 
-​           -t int <times> -m (0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60) -th <lowthreshold> <highthreshold>        run interrupt test. times means test times. lowthreshold means interrupt low threshold. highthreshold means interrupt high threshold.
+   ```shell
+   tcs34725 (-t reg | --test=reg)
+   ```
 
-​           -c (read <times> | int <times> -m (0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60) -th <lowthreshold> <highthreshold>)
+5. Run read test, num means test times.
 
-​           -c read <times>        run read function. times means read times.  
+   ```shell
+   tcs34725 (-t read | --test=read) [--times=<num>]
+   ```
 
-​           -c int <times> -m (0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60) -th <lowthreshold> <highthreshold>        run interrupt function. times means read times. lowthreshold means interrupt low threshold. highthreshold means interrupt high threshold.
+6. Run interrupt test, num means test times, low means interrupt low threshold, high means interrupt high threshold.
+
+   ```shell
+   tcs34725 (-t int | --test=int) [--times=<num>] [--mode=<0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60>] [--low-threshold=<low>] [--high-threshold=<high>]
+   ```
+
+7. Run read function, num means read times.
+
+   ```shell
+   tcs34725 (-e read | --example=read) [--times=<num>]
+   ```
+
+8. Run interrupt function, num means read times, low means interrupt low threshold, high means interrupt high threshold.
+
+   ```shell
+   tcs34725 (-e int | --example=int) [--times=<num>] [--mode=<0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60>] [--low-threshold=<low>] [--high-threshold=<high>]
+   ```
 
 #### 3.2 Command Example
 
@@ -112,7 +141,6 @@ tcs34725: min supply voltage is 2.7V.
 tcs34725: max supply voltage is 3.6V.
 tcs34725: max current is 20.00mA.
 tcs34725: max temperature is 85.0C.
-tcs34725: min temperature is -40.0C.
 ```
 
 ```shell
@@ -183,10 +211,10 @@ tcs34725: check wait time ok.
 tcs34725: set wait time 7400ms.
 tcs34725: check wait time ok.
 tcs34725: tcs34725_set_rgbc_clear_low_interrupt_threshold/tcs34725_get_rgbc_clear_low_interrupt_threshold test.
-tcs34725: set rgbc clear low interrupt threshold 0x05EE.
+tcs34725: set rgbc clear low interrupt threshold 0xF6F7.
 tcs34725: check rgbc clear low interrupt threshold ok.
 tcs34725: tcs34725_set_rgbc_clear_high_interrupt_threshold/tcs34725_get_rgbc_clear_high_interrupt_threshold test.
-tcs34725: set rgbc clear high interrupt threshold 0xBDA7.
+tcs34725: set rgbc clear high interrupt threshold 0x934B.
 tcs34725: check rgbc clear high interrupt threshold ok.
 tcs34725: tcs34725_set_gain/tcs34725_get_gain test.
 tcs34725: set gain 1x.
@@ -234,7 +262,7 @@ tcs34725: finish register test.
 ```
 
 ```shell
-./tcs34725 -t read 3
+./tcs34725 -t read --times=3
 
 tcs34725: chip is AMS TCS34725.
 tcs34725: manufacturer is AMS.
@@ -247,140 +275,140 @@ tcs34725: max temperature is 85.0C.
 tcs34725: min temperature is -40.0C.
 tcs34725: start read test.
 tcs34725: set 1x gain.
-tcs34725: red is 23.
-tcs34725: green is 23.
-tcs34725: blue is 18.
-tcs34725: clear is 70.
-tcs34725: red is 23.
-tcs34725: green is 23.
-tcs34725: blue is 18.
-tcs34725: clear is 70.
-tcs34725: red is 23.
-tcs34725: green is 23.
-tcs34725: blue is 18.
-tcs34725: clear is 70.
+tcs34725: red is 123.
+tcs34725: green is 124.
+tcs34725: blue is 106.
+tcs34725: clear is 341.
+tcs34725: red is 123.
+tcs34725: green is 124.
+tcs34725: blue is 106.
+tcs34725: clear is 341.
+tcs34725: red is 123.
+tcs34725: green is 124.
+tcs34725: blue is 106.
+tcs34725: clear is 342.
 tcs34725: set 4x gain.
-tcs34725: red is 23.
-tcs34725: green is 23.
-tcs34725: blue is 19.
-tcs34725: clear is 71.
-tcs34725: red is 91.
-tcs34725: green is 90.
-tcs34725: blue is 73.
-tcs34725: clear is 273.
-tcs34725: red is 91.
-tcs34725: green is 90.
-tcs34725: blue is 73.
-tcs34725: clear is 274.
+tcs34725: red is 124.
+tcs34725: green is 125.
+tcs34725: blue is 106.
+tcs34725: clear is 342.
+tcs34725: red is 484.
+tcs34725: green is 491.
+tcs34725: blue is 416.
+tcs34725: clear is 1342.
+tcs34725: red is 484.
+tcs34725: green is 491.
+tcs34725: blue is 416.
+tcs34725: clear is 1342.
 tcs34725: set 16x gain.
-tcs34725: red is 91.
-tcs34725: green is 90.
-tcs34725: blue is 73.
-tcs34725: clear is 274.
-tcs34725: red is 374.
-tcs34725: green is 361.
-tcs34725: blue is 293.
-tcs34725: clear is 1114.
-tcs34725: red is 375.
-tcs34725: green is 363.
-tcs34725: blue is 295.
-tcs34725: clear is 1120.
+tcs34725: red is 484.
+tcs34725: green is 490.
+tcs34725: blue is 415.
+tcs34725: clear is 1339.
+tcs34725: red is 1975.
+tcs34725: green is 1982.
+tcs34725: blue is 1699.
+tcs34725: clear is 5452.
+tcs34725: red is 1974.
+tcs34725: green is 1982.
+tcs34725: blue is 1698.
+tcs34725: clear is 5450.
 tcs34725: set 60x gain.
-tcs34725: red is 377.
-tcs34725: green is 364.
-tcs34725: blue is 296.
-tcs34725: clear is 1124.
-tcs34725: red is 1447.
-tcs34725: green is 1399.
-tcs34725: blue is 1136.
-tcs34725: clear is 4296.
-tcs34725: red is 1445.
-tcs34725: green is 1396.
-tcs34725: blue is 1135.
-tcs34725: clear is 4289.
+tcs34725: red is 1976.
+tcs34725: green is 1983.
+tcs34725: blue is 1700.
+tcs34725: clear is 5453.
+tcs34725: red is 7552.
+tcs34725: green is 7599.
+tcs34725: blue is 6457.
+tcs34725: clear is 20580.
+tcs34725: red is 7563.
+tcs34725: green is 7609.
+tcs34725: blue is 6464.
+tcs34725: clear is 20608.
 tcs34725: set rgbc integration time 2.4ms.
-tcs34725: red is 18.
-tcs34725: green is 18.
-tcs34725: blue is 14.
-tcs34725: clear is 55.
-tcs34725: red is 19.
-tcs34725: green is 18.
-tcs34725: blue is 14.
-tcs34725: clear is 56.
-tcs34725: red is 18.
-tcs34725: green is 17.
-tcs34725: blue is 14.
-tcs34725: clear is 53.
+tcs34725: red is 94.
+tcs34725: green is 94.
+tcs34725: blue is 81.
+tcs34725: clear is 259.
+tcs34725: red is 94.
+tcs34725: green is 94.
+tcs34725: blue is 81.
+tcs34725: clear is 259.
+tcs34725: red is 94.
+tcs34725: green is 94.
+tcs34725: blue is 81.
+tcs34725: clear is 259.
 tcs34725: set rgbc integration time 24ms.
-tcs34725: red is 180.
-tcs34725: green is 176.
-tcs34725: blue is 144.
-tcs34725: clear is 542.
-tcs34725: red is 182.
-tcs34725: green is 177.
-tcs34725: blue is 145.
-tcs34725: clear is 546.
-tcs34725: red is 181.
-tcs34725: green is 176.
-tcs34725: blue is 144.
-tcs34725: clear is 544.
+tcs34725: red is 940.
+tcs34725: green is 943.
+tcs34725: blue is 808.
+tcs34725: clear is 2595.
+tcs34725: red is 940.
+tcs34725: green is 944.
+tcs34725: blue is 809.
+tcs34725: clear is 2595.
+tcs34725: red is 941.
+tcs34725: green is 944.
+tcs34725: blue is 809.
+tcs34725: clear is 2597.
 tcs34725: set rgbc integration time 50ms.
-tcs34725: red is 380.
-tcs34725: green is 371.
-tcs34725: blue is 303.
-tcs34725: clear is 1143.
-tcs34725: red is 380.
-tcs34725: green is 371.
-tcs34725: blue is 303.
-tcs34725: clear is 1142.
-tcs34725: red is 373.
-tcs34725: green is 360.
-tcs34725: blue is 293.
-tcs34725: clear is 1112.
+tcs34725: red is 1974.
+tcs34725: green is 1981.
+tcs34725: blue is 1698.
+tcs34725: clear is 5449.
+tcs34725: red is 1974.
+tcs34725: green is 1982.
+tcs34725: blue is 1698.
+tcs34725: clear is 5450.
+tcs34725: red is 1973.
+tcs34725: green is 1980.
+tcs34725: blue is 1697.
+tcs34725: clear is 5446.
 tcs34725: set rgbc integration time 101ms.
-tcs34725: red is 763.
-tcs34725: green is 736.
-tcs34725: blue is 598.
-tcs34725: clear is 2272.
-tcs34725: red is 767.
-tcs34725: green is 741.
-tcs34725: blue is 603.
-tcs34725: clear is 2288.
-tcs34725: red is 769.
-tcs34725: green is 744.
-tcs34725: blue is 606.
-tcs34725: clear is 2297.
+tcs34725: red is 4040.
+tcs34725: green is 4055.
+tcs34725: blue is 3475.
+tcs34725: clear is 11155.
+tcs34725: red is 4043.
+tcs34725: green is 4058.
+tcs34725: blue is 3477.
+tcs34725: clear is 11158.
+tcs34725: red is 4041.
+tcs34725: green is 4057.
+tcs34725: blue is 3476.
+tcs34725: clear is 11155.
 tcs34725: set rgbc integration time 154ms.
-tcs34725: red is 1144.
-tcs34725: green is 1106.
-tcs34725: blue is 901.
-tcs34725: clear is 3415.
-tcs34725: red is 1128.
-tcs34725: green is 1084.
-tcs34725: blue is 882.
-tcs34725: clear is 3351.
-tcs34725: red is 1112.
-tcs34725: green is 1093.
-tcs34725: blue is 898.
-tcs34725: clear is 3364.
+tcs34725: red is 6021.
+tcs34725: green is 6043.
+tcs34725: blue is 5178.
+tcs34725: clear is 16616.
+tcs34725: red is 6014.
+tcs34725: green is 6036.
+tcs34725: blue is 5173.
+tcs34725: clear is 16600.
+tcs34725: red is 6017.
+tcs34725: green is 6039.
+tcs34725: blue is 5175.
+tcs34725: clear is 16607.
 tcs34725: set rgbc integration time 700ms.
-tcs34725: red is 4440.
-tcs34725: green is 4359.
-tcs34725: blue is 3578.
-tcs34725: clear is 13420.
-tcs34725: red is 4437.
-tcs34725: green is 4356.
-tcs34725: blue is 3575.
-tcs34725: clear is 13411.
-tcs34725: red is 4434.
-tcs34725: green is 4351.
-tcs34725: blue is 3570.
-tcs34725: clear is 13394.
+tcs34725: red is 24074.
+tcs34725: green is 24157.
+tcs34725: blue is 20702.
+tcs34725: clear is 65535.
+tcs34725: red is 24071.
+tcs34725: green is 24155.
+tcs34725: blue is 20699.
+tcs34725: clear is 65535.
+tcs34725: red is 24070.
+tcs34725: green is 24154.
+tcs34725: blue is 20698.
+tcs34725: clear is 65535.
 tcs34725: finish read test.
 ```
 
 ```shell
-./tcs34725 -t int 3 -m 1 -th 10 100
+./tcs34725 -t int --times=3 --mode=1 --low-threshold=10 --high-threshold=100
 
 tcs34725: set interrupt mode TCS34725_INTERRUPT_MODE_1_CLEAR_CHANNEL_OUT_OF_THRESHOLD.
 tcs34725: chip is AMS TCS34725.
@@ -393,72 +421,74 @@ tcs34725: max current is 20.00mA.
 tcs34725: max temperature is 85.0C.
 tcs34725: min temperature is -40.0C.
 tcs34725: start interrupt test.
-tcs34725: clear is 1315 and check high interrupt high threshold.
-tcs34725: clear is 1315 and check low interrupt none.
-tcs34725: clear is 1313 and check high interrupt high threshold.
-tcs34725: clear is 1313 and check low interrupt none.
-tcs34725: clear is 1319 and check high interrupt high threshold.
-tcs34725: clear is 1319 and check low interrupt none.
+tcs34725: clear is 5470 and check high interrupt high threshold.
+tcs34725: clear is 5470 and check low interrupt none.
+tcs34725: clear is 5475 and check high interrupt high threshold.
+tcs34725: clear is 5475 and check low interrupt none.
+tcs34725: clear is 5464 and check high interrupt high threshold.
+tcs34725: clear is 5464 and check low interrupt none.
 tcs34725: finish interrupt test.
 ```
 
 ```shell
-./tcs34725 -c read 3
+./tcs34725 -e read --times=3
 
 tcs34725: 1/3.
-tcs34725: red is 393.
-tcs34725: green is 401.
-tcs34725: blue is 352.
-tcs34725: clear is 1237.
+tcs34725: red is 1964.
+tcs34725: green is 1966.
+tcs34725: blue is 1682.
+tcs34725: clear is 5414.
 tcs34725: 2/3.
-tcs34725: red is 393.
-tcs34725: green is 401.
-tcs34725: blue is 351.
-tcs34725: clear is 1238.
+tcs34725: red is 1967.
+tcs34725: green is 1969.
+tcs34725: blue is 1685.
+tcs34725: clear is 5421.
 tcs34725: 3/3.
-tcs34725: red is 393.
-tcs34725: green is 401.
-tcs34725: blue is 351.
-tcs34725: clear is 1235.
+tcs34725: red is 1960.
+tcs34725: green is 1968.
+tcs34725: blue is 1685.
+tcs34725: clear is 5414.
 ```
 
 ```shell
-./tcs34725 -c int 3 -m 3 -th 10 100
+./tcs34725 -e int --times=3 --mode=3 --low-threshold=10 --high-threshold=100
 
-tcs34725: set interrupt mode TCS34725_INTERRUPT_MODE_45_CLEAR_CHANNEL_OUT_OF_THRESHOLD.
-tcs34725: red is 377.
-tcs34725: green is 415.
-tcs34725: blue is 318.
-tcs34725: clear is 1244.
-tcs34725: red is 377.
-tcs34725: green is 415.
-tcs34725: blue is 318.
-tcs34725: clear is 1244.
-tcs34725: red is 376.
-tcs34725: green is 414.
-tcs34725: blue is 318.
-tcs34725: clear is 1240.
-tcs34725: find break.
+tcs34725: set interrupt mode TCS34725_INTERRUPT_MODE_3_CLEAR_CHANNEL_OUT_OF_THRESHOLD.
+tcs34725: red is 1157.
+tcs34725: green is 1237.
+tcs34725: blue is 1111.
+tcs34725: clear is 3426.
+tcs34725: find interrupt.
 ```
 
 ```shell
 ./tcs34725 -h
 
-tcs34725 -i
-	show tcs34725 chip and driver information.
-tcs34725 -h
-	show tcs34725 help.
-tcs34725 -p
-	show tcs34725 pin connections of the current board.
-tcs34725 -t reg
-	run register test.
-tcs34725 -t read <times>
-	run read test.times means test times.
-tcs34725 -t int <times> -m (0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60) -th <lowthreshold> <highthreshold>
-	run interrupt test.times means test times.lowthreshold means interrupt low threshold.highthreshold means interrupt high threshold.
-tcs34725 -c read <times>
-	run read function.times means read times.
-tcs34725 -c int <times> -m (0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60) -th <lowthreshold> <highthreshold>
-	run interrupt function.times means read times.lowthreshold means interrupt low threshold.highthreshold means interrupt high threshold.
-```
+Usage:
+  tcs34725 (-i | --information)
+  tcs34725 (-h | --help)
+  tcs34725 (-p | --port)
+  tcs34725 (-t reg | --test=reg)
+  tcs34725 (-t read | --test=read) [--times=<num>]
+  tcs34725 (-t int | --test=int) [--times=<num>]
+           [--mode=<0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60>]
+           [--low-threshold=<low>] [--high-threshold=<high>]
+  tcs34725 (-e read | --example=read) [--times=<num>]
+  tcs34725 (-e int | --example=int) [--times=<num>]
+           [--mode=<0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60>]
+           [--low-threshold=<low>] [--high-threshold=<high>]
 
+Options:
+  -e <read | int>, --example=<read | int>
+                                   Run the driver example.
+  -h, --help                       Show the help.
+      --high-threshold=<high>      Set the interrupt high threshold.([default: 100])
+  -i, --information                Show the chip information.
+      --low-threshold=<low>        Set the interrupt low threshold.([default: 10])
+      --mode=<0 | 1 | 2 | 3 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60> 
+                                   Set the interrupt mode.
+  -p, --port                       Display the pin connections of the current board.
+  -t <reg | read | int>, --test=<reg | read | int>
+                                   Run the driver test.
+      --times=<num>                Set the running times.([default: 3])
+```

@@ -441,7 +441,7 @@ uint8_t tcs34725_set_rgbc_integration_time(tcs34725_handle_t *handle, tcs34725_i
 /**
  * @brief      get the rgbc adc integration time
  * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *t points to a integration time buffer
+ * @param[out] *t points to an integration time buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rgbc integration time failed
@@ -768,7 +768,7 @@ uint8_t tcs34725_set_interrupt_mode(tcs34725_handle_t *handle, tcs34725_interrup
 /**
  * @brief      get the interrupt mode
  * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *mode points to a interrupt mode buffer
+ * @param[out] *mode points to an interrupt mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt mode failed
@@ -849,7 +849,7 @@ uint8_t tcs34725_set_gain(tcs34725_handle_t *handle, tcs34725_gain_t gain)
 /**
  * @brief      get the adc gain
  * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *gain points to a adc gain buffer
+ * @param[out] *gain points to an adc gain buffer
  * @return     status code
  *             - 0 success
  *             - 1 get gain failed

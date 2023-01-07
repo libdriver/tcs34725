@@ -81,7 +81,7 @@ uint8_t tcs34725_register_test(void)
         tcs34725_interface_debug_print("tcs34725: chip is %s.\n", info.chip_name);
         tcs34725_interface_debug_print("tcs34725: manufacturer is %s.\n", info.manufacturer_name);
         tcs34725_interface_debug_print("tcs34725: interface is %s.\n", info.interface);
-        tcs34725_interface_debug_print("tcs34725: driver version is %d.%d.\n", info.driver_version/1000, (info.driver_version%1000)/100);
+        tcs34725_interface_debug_print("tcs34725: driver version is %d.%d.\n", info.driver_version / 1000, (info.driver_version % 1000) / 100);
         tcs34725_interface_debug_print("tcs34725: min supply voltage is %0.1fV.\n", info.supply_voltage_min_v);
         tcs34725_interface_debug_print("tcs34725: max supply voltage is %0.1fV.\n", info.supply_voltage_max_v);
         tcs34725_interface_debug_print("tcs34725: max current is %0.2fmA.\n", info.max_current_ma);
@@ -419,7 +419,7 @@ uint8_t tcs34725_register_test(void)
         
         return 1;
     }
-    tcs34725_interface_debug_print("tcs34725: check wait time %s.\n", wait_time==TCS34725_INTEGRATION_TIME_2P4MS?"ok":"error"); 
+    tcs34725_interface_debug_print("tcs34725: check wait time %s.\n", wait_time==TCS34725_WAIT_TIME_2P4MS?"ok":"error"); 
     
     /* set wait time 204ms */
     res = tcs34725_set_wait_time(&gs_handle, TCS34725_WAIT_TIME_204MS);
@@ -439,7 +439,7 @@ uint8_t tcs34725_register_test(void)
         
         return 1;
     }
-    tcs34725_interface_debug_print("tcs34725: check wait time %s.\n", wait_time==TCS34725_WAIT_TIME_204MS?"ok":"error");     
+    tcs34725_interface_debug_print("tcs34725: check wait time %s.\n", wait_time==TCS34725_WAIT_TIME_204MS?"ok":"error");
     
     /* set wait time 614ms */
     res = tcs34725_set_wait_time(&gs_handle, TCS34725_WAIT_TIME_614MS);
