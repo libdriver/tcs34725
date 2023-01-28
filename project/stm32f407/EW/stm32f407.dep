@@ -5,13 +5,1903 @@
     <configuration>
         <name>Release</name>
         <outputs>
-            <file>$PROJ_DIR$\..\usr\src\system_stm32f4xx.c</file>
-            <file>$PROJ_DIR$\..\usr\src\main.c</file>
-            <file>$PROJ_DIR$\..\usr\src\getopt.c</file>
-            <file>$PROJ_DIR$\..\usr\src\shell.c</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_pccard.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_pcd.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_ltdc.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_nand.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_pwr.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_pwr_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_i2s_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_irda.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_rcc.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_rcc_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_i2s.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_pcd_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_i2c_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_gpio_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_i2c.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_iwdg.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_flash_ramfunc.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_gpio.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_hash.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_hcd.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_nor.h</file>
+            <file>$PROJ_DIR$\..\usr\inc\stm32f4xx_hal_conf.h</file>
+            <file>$PROJ_DIR$\..\usr\inc\stm32f407xx.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_usart.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_rng.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_sd.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_tim_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_ll_sdmmc.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_rtc_ex.h</file>
+            <file>$PROJ_DIR$\..\usr\inc\system_stm32f4xx.h</file>
+            <file>$PROJ_DIR$\..\usr\inc\stm32f4xx.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_ll_usb.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_rtc.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_sdram.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_spi.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_tim.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_uart.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_wwdg.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_ll_fsmc.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_smartcard.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_sram.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_sai.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_ll_adc.h</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_dma2d.o</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_i2c.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dac_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dma2d.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dcmi.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dma_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_fmpi2c_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_gpio.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_crc.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_hash.c</file>
+            <file>$PROJ_DIR$\..\driver\src\stm32f407_driver_tcs34725_interface.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_cortex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_flash.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_cec.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_fmpsmbus_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dcmi_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_flash_ramfunc.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_hash_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_hcd.c</file>
+            <file>$PROJ_DIR$\..\..\..\example\driver_tcs34725_interrupt.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dsi.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_adc.c</file>
+            <file>$PROJ_DIR$\..\..\..\example\driver_tcs34725_basic.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_cryp_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_adc_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dac.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dfsdm.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dma.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_fmpi2c.c</file>
+            <file>$PROJ_DIR$\..\..\..\src\driver_tcs34725.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_fmpsmbus.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_eth.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_flash_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_can.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_cryp.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_exti.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_ltdc.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_uart.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_ltdc_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_adc.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_pcd.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_rcc.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_exti.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_lptim.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_irda.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_qspi.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_rcc_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_sai_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_rtc.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_fmc.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_fmpi2c.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_fsmc.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_iwdg.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_spdifrx.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_smartcard.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_pwr.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_pccard.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_sram.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_spi.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_wwdg.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_gpio.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_i2s_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_usart.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_sd.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_crc.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_sai.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_i2s.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_sdram.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_i2c_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_dac.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_rtc_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_dma.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_tim.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_dma2d.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_nor.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_mmc.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_pcd_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_rng.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_tim_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_pwr_ex.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_nand.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_smbus.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_spi.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_utils.c</file>
+            <file>$PROJ_DIR$\..\interface\src\clock.c</file>
+            <file>$PROJ_DIR$\..\hal\asm\startup_stm32f407xx_ew.s</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_tcs34725_interrupt_test.c</file>
             <file>$PROJ_DIR$\..\usr\src\stm32f4xx_hal_msp.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_i2c.c</file>
+            <file>$PROJ_DIR$\..\usr\src\system_stm32f4xx.c</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_fmpsmbus.o</file>
+            <file>$PROJ_DIR$\..\interface\src\gpio.c</file>
+            <file>$PROJ_DIR$\..\interface\src\uart.c</file>
+            <file>$PROJ_DIR$\..\interface\src\iic.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_lptim.c</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_tcs34725_read_test.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_pwr.c</file>
             <file>$PROJ_DIR$\..\usr\src\stm32f4xx_it.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_usb.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_rng.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_rtc.c</file>
+            <file>$PROJ_DIR$\..\usr\src\getopt.c</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_tcs34725_register_test.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_rcc.c</file>
+            <file>$PROJ_DIR$\..\usr\src\main.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_usart.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_sdmmc.c</file>
+            <file>$PROJ_DIR$\..\interface\src\delay.c</file>
+            <file>$PROJ_DIR$\..\usr\src\shell.c</file>
+            <file>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_tim.c</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\example\driver_tcs34725_basic.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\example\driver_tcs34725_interrupt.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_adc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_adc_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_cryp.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_crc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_can.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_cryp_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_dac.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_dcmi.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_dac_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\driver\driver_tcs34725.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_dcmi_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_dfsdm.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_dma.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_dma2d.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_cortex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_dma_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_dsi.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_eth.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_exti.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_flash.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_flash_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_fmpi2c.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_flash_ramfunc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_fmpi2c_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\driver\stm32f407_driver_tcs34725_interface.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_cec.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_lptim.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\interface\iic.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\test\driver_tcs34725_register_test.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_i2c.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_spi.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\interface\uart.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_fmc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_rtc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\interface\delay.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_fmpi2c.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\usr\shell.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\test\driver_tcs34725_read_test.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\usr\stm32f4xx_it.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_gpio.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\usr\getopt.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\usr\system_stm32f4xx.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\exe\stm32f407.out</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_pwr.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_fsmc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_exti.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_rng.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_usb.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\test\driver_tcs34725_interrupt_test.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\usr\stm32f4xx_hal_msp.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\startup\startup_stm32f407xx_ew.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\exe\stm32f407.hex</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_tim.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_rcc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_sdmmc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\usr\main.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_usart.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_utils.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\interface\clock.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\interface\gpio.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_wwdg.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_adc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_crc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_dac.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_ll_dma.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_i2s.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_sdram.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_lptim.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_rng.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_spi.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_hcd.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_sd.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_ltdc_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_pcd_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_sai_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_hash_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_tim.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_nand.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_sram.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_uart.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_fmpsmbus_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_hash.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_pwr.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_i2s_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_pccard.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_iwdg.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_i2c_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_pwr_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_rcc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_ltdc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_mmc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_rcc_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_rtc.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_i2c.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_smartcard.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_qspi.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_spdifrx.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_sai.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_irda.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_gpio.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_pcd.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_rtc_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_smbus.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_tim_ex.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_nor.o</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\hal\stm32f4xx_hal_usart.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\..\output\ew\release\obj\startup\startup_stm32f407xx_ew.o.rsp</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_cryp.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_flash.h</file>
+            <file>$PROJ_DIR$\..\cmsis\cmsis_version.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_can.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_dcmi.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_dac_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_flash_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_dcmi_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\Legacy\stm32_hal_legacy.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_def.h</file>
+            <file>$PROJ_DIR$\..\cmsis\mpu_armv7.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_adc_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_adc.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_crc.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_dma2d.h</file>
+            <file>$PROJ_DIR$\..\cmsis\core_cm4.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_dma.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_dma_ex.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_cortex.h</file>
+            <file>$PROJ_DIR$\..\cmsis\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_hal_dac.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\..\..\..\src\driver_tcs34725.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\..\cmsis\cmsis_compiler.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_tcs34725_read_test.h</file>
+            <file>$PROJ_DIR$\..\output\ew\release\list\stm32f407.map</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_ll_utils.h</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_tcs34725_register_test.h</file>
+            <file>$PROJ_DIR$\..\usr\inc\getopt.h</file>
+            <file>$PROJ_DIR$\..\interface\inc\clock.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_tcs34725_interrupt_test.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_ll_rcc.h</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_ll_pwr.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\..\hal\inc\stm32f4xx_ll_system.h</file>
+            <file>$TOOLKIT_DIR$\config\linker\ST\stm32f407xG.icf</file>
+            <file>$PROJ_DIR$\..\interface\inc\gpio.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$PROJ_DIR$\..\..\..\interface\driver_tcs34725_interface.h</file>
+            <file>$PROJ_DIR$\..\interface\inc\delay.h</file>
+            <file>$PROJ_DIR$\..\interface\inc\iic.h</file>
+            <file>$PROJ_DIR$\..\interface\inc\uart.h</file>
+            <file>$PROJ_DIR$\..\..\..\example\driver_tcs34725_interrupt.h</file>
+            <file>$PROJ_DIR$\..\usr\inc\stm32f4xx_it.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\..\usr\inc\shell.h</file>
+            <file>$PROJ_DIR$\..\..\..\example\driver_tcs34725_basic.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
         </outputs>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 250</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 199 301</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dac_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 164</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dma2d.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 169</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dcmi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 163</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dma_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 171</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_fmpi2c_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 180</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 256</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_crc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 159</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_hash.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 238</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\stm32f407_driver_tcs34725_interface.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 181</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 263 299 315 292 294 293 298 290 296 297 316 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 317 318 319 22 30 21 29 291</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 178</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_cortex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 170</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_flash.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 175</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_cec.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 182</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_fmpsmbus_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 237</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dcmi_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 166</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_flash_ramfunc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 179</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_hash_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 232</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_hcd.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 227</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\example\driver_tcs34725_interrupt.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 155</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 263 294 293 298 290 296 297 320 316 291</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dsi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 172</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_adc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 156</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\example\driver_tcs34725_basic.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 154</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 263 294 293 298 290 296 297 324 316 291</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_cryp_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 161</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_adc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 157</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dac.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 162</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dfsdm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 167</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_dma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 168</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_fmpi2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 177</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\src\driver_tcs34725.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 165</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 263 294 293 298 290 296 297 291</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_fmpsmbus.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 134</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_eth.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 173</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_flash_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 176</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_can.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_cryp.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 158</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_exti.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 174</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_ltdc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 246</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 236</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_ltdc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 229</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_adc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 218</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_pcd.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 257</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_rcc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 245</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_exti.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 202</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_lptim.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 224</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_irda.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 255</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_qspi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 252</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_rcc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 248</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_sai_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 231</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_rtc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 249</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_fmc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 189</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_fmpi2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 192</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_fsmc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 201</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_iwdg.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 242</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_spdifrx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 253</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_smartcard.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 251</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_pwr.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 239</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_pccard.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 241</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_sram.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 235</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 226</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_wwdg.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 217</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 196</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_i2s_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 240</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_usart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 262</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_sd.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 228</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_crc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 219</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_sai.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 254</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_i2s.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 222</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_sdram.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 223</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_i2c_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 243</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_dac.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 220</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_rtc_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 258</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_dma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 221</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_tim.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 233</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_dma2d.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 43</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_nor.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 261</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_mmc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 247</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_pcd_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 230</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_rng.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 225</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_tim_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 260</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_pwr_ex.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 244</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_nand.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 234</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_hal_smbus.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 259</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 187</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_utils.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 214</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 309 308 27 312 31 302 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\interface\src\clock.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 215</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 305 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\asm\startup_stm32f407xx_ew.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 207</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 265</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\test\driver_tcs34725_interrupt_test.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 205</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 263 294 293 298 290 296 297 316 291 307</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\usr\src\stm32f4xx_hal_msp.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 206</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 186</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\usr\src\system_stm32f4xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 198</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\interface\src\gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 216</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 314 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\interface\src\uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 188</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 263 299 315 292 294 293 298 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 319 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\interface\src\iic.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 184</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 317 318 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_lptim.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 183</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\test\driver_tcs34725_read_test.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 194</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 263 294 293 298 290 296 297 316 291 300</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_pwr.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 200</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\usr\src\stm32f4xx_it.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 195</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 319 22 30 21 321 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_usb.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 204</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_rng.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 203</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_rtc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\usr\src\getopt.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 197</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 293 290 296 297 304</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\test\driver_tcs34725_register_test.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 185</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 322 263 294 293 325 298 290 296 297 316 291 303</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_rcc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 210</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\usr\src\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 212</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 322 263 299 292 294 293 325 298 290 296 297 324 320 316 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 305 317 314 319 304 323 22 30 21 29 291 307 300 303</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_usart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 213</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_sdmmc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 211</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\interface\src\delay.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 191</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 299 292 294 290 296 297 295 288 270 284 279 276 277 281 280 271 287 282 268 289 273 272 275 278 285 283 286 269 274 16 17 13 18 19 14 12 10 6 7 15 2 3 20 0 1 11 4 5 8 9 24 32 28 41 25 33 39 34 40 35 26 36 23 37 42 38 27 31 317 22 30 21 29</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\usr\src\shell.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 193</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 267 266 264 263 294 293 298 290 296 297 323</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\hal\src\stm32f4xx_ll_tim.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 209</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\output\ew\release\exe\stm32f407.out</name>
+            <outputs>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 208</file>
+                </tool>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 301</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 313 306 311 310 165 181 154 155 178 156 157 160 182 170 159 158 161 162 164 163 166 167 168 169 171 172 173 174 175 176 179 177 180 134 237 256 238 232 227 250 243 222 240 255 242 224 246 229 247 234 261 241 257 230 239 244 252 245 248 225 249 258 254 231 228 223 251 259 253 226 235 233 260 236 262 217 218 219 220 221 43 202 189 192 201 196 186 183 200 210 203 190 211 187 209 213 204 214 215 191 216 184 188 207 205 194 185 197 212 193 206 195 198</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\output\ew\release\exe\stm32f407.hex</name>
+            <inputs>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 199</file>
+                </tool>
+            </inputs>
+        </file>
         <forcedrebuild>
             <name>[REBUILD_ALL]</name>
         </forcedrebuild>
