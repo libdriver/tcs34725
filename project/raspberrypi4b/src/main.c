@@ -76,7 +76,7 @@ uint8_t tcs34725(uint8_t argc, char **argv)
         {"times", required_argument, NULL, 4},
         {NULL, 0, NULL, 0},
     };
-    char type[33] = "unknow";
+    char type[33] = "unknown";
     uint32_t times = 3;
     tcs34725_interrupt_mode_t mode = TCS34725_INTERRUPT_MODE_EVERY_RGBC_CYCLE;
     uint16_t high_threshold = 100;
@@ -526,7 +526,7 @@ int main(uint8_t argc, char **argv)
     }
     else
     {
-        tcs34725_interface_debug_print("tcs34725: unknow status code.\n");
+        tcs34725_interface_debug_print("tcs34725: unknown status code.\n");
     }
 
     return 0;

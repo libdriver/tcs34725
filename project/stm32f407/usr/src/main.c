@@ -104,7 +104,7 @@ uint8_t tcs34725(uint8_t argc, char **argv)
         {"times", required_argument, NULL, 4},
         {NULL, 0, NULL, 0},
     };
-    char type[33] = "unknow";
+    char type[33] = "unknown";
     uint32_t times = 3;
     tcs34725_interrupt_mode_t mode = TCS34725_INTERRUPT_MODE_EVERY_RGBC_CYCLE;
     uint16_t high_threshold = 100;
@@ -544,7 +544,7 @@ int main(void)
     /* uart init */
     uart_init(115200);
 
-    /* shell init && register tcs34725 fuction */
+    /* shell init && register tcs34725 function */
     shell_init();
     shell_register("tcs34725", tcs34725);
     uart_print("tcs34725: welcome to libdriver tcs34725.\n");
@@ -567,7 +567,7 @@ int main(void)
             }
             else if (res == 2)
             {
-                uart_print("tcs34725: unknow command.\n");
+                uart_print("tcs34725: unknown command.\n");
             }
             else if (res == 3)
             {
@@ -583,7 +583,7 @@ int main(void)
             }
             else
             {
-                uart_print("tcs34725: unknow status code.\n");
+                uart_print("tcs34725: unknown status code.\n");
             }
             uart_flush();
         }
