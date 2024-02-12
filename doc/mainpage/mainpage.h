@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver TCS34725
- * @brief     libdriver tcs34725 is a full function driver of tcs34725 and it can run in both MCU and Linux platform.
+ * @brief     LibDriver TCS34725 is a full function driver of TCS34725 and it can run in both MCU and Linux platform.
  * @version   2.0.0
  * @author    Shifeng Li
  *
