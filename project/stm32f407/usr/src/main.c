@@ -78,8 +78,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 /**
  * @brief     tcs34725 full function
- * @param[in] argc is arg numbers
- * @param[in] **argv is the arg address
+ * @param[in] argc arg numbers
+ * @param[in] **argv arg address
  * @return    status code
  *            - 0 success
  *            - 1 run failed

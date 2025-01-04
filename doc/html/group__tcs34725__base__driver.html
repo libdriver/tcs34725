@@ -383,7 +383,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -429,8 +429,8 @@ Functions</h2></td></tr>
 <p>get the adc gain </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*gain</td><td>points to an adc gain buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*gain</td><td>pointer to an adc gain buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -476,8 +476,8 @@ Functions</h2></td></tr>
 <p>get the power status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -523,8 +523,8 @@ Functions</h2></td></tr>
 <p>get the rgbc status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -570,8 +570,8 @@ Functions</h2></td></tr>
 <p>get the rgbc adc integration time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>points to an integration time buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>pointer to an integration time buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -617,8 +617,8 @@ Functions</h2></td></tr>
 <p>get the wait time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -664,8 +664,8 @@ Functions</h2></td></tr>
 <p>get the wait time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>points to a wait time buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>pointer to a wait time buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -701,7 +701,7 @@ Functions</h2></td></tr>
 <p>get chip information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to a tcs34725 info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to a tcs34725 info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -735,7 +735,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -781,8 +781,8 @@ Functions</h2></td></tr>
 <p>read the clear data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*clear</td><td>points to a clear color buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*clear</td><td>pointer to a clear color buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -840,10 +840,10 @@ Functions</h2></td></tr>
 <p>read the rgb data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*red</td><td>points to a red color buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*green</td><td>points to a green color buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*blue</td><td>points to a blue color buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*red</td><td>pointer to a red color buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*green</td><td>pointer to a green color buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*blue</td><td>pointer to a blue color buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -907,11 +907,11 @@ Functions</h2></td></tr>
 <p>read the rgbc data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*red</td><td>points to a red color buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*green</td><td>points to a green color buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*blue</td><td>points to a blue color buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*clear</td><td>points to a clear color buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*red</td><td>pointer to a red color buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*green</td><td>pointer to a green color buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*blue</td><td>pointer to a blue color buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*clear</td><td>pointer to a clear color buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -957,8 +957,8 @@ Functions</h2></td></tr>
 <p>set the adc gain </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>is the adc gain </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>adc gain </td></tr>
   </table>
   </dd>
 </dl>
@@ -1004,8 +1004,8 @@ Functions</h2></td></tr>
 <p>enable or disable the power </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1051,8 +1051,8 @@ Functions</h2></td></tr>
 <p>enable or disable the rgbc adc </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1098,8 +1098,8 @@ Functions</h2></td></tr>
 <p>set the rgbc adc integration time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td>is the adc integration time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td>adc integration time </td></tr>
   </table>
   </dd>
 </dl>
@@ -1145,8 +1145,8 @@ Functions</h2></td></tr>
 <p>enable or disable the wait time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1192,8 +1192,8 @@ Functions</h2></td></tr>
 <p>set the wait time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a tcs34725 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td>is the wait time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a tcs34725 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td>wait time </td></tr>
   </table>
   </dd>
 </dl>
