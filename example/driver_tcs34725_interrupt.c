@@ -41,9 +41,9 @@ static tcs34725_handle_t gs_handle;        /**< tcs34725 handle */
 
 /**
  * @brief     interrupt example init
- * @param[in] mode is the interrupt mode
- * @param[in] low_threshold is the interrupt low threshold
- * @param[in] high_threshold is the interrupt high threshold
+ * @param[in] mode interrupt mode
+ * @param[in] low_threshold interrupt low threshold
+ * @param[in] high_threshold interrupt high threshold
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -176,10 +176,10 @@ uint8_t tcs34725_interrupt_init(tcs34725_interrupt_mode_t mode, uint16_t low_thr
 
 /**
  * @brief      interrupt example read
- * @param[out] *red points to a red color buffer
- * @param[out] *green points to a green color buffer
- * @param[out] *blue points to a blue color buffer
- * @param[out] *clear points to a clear color buffer
+ * @param[out] *red pointer to a red color buffer
+ * @param[out] *green pointer to a green color buffer
+ * @param[out] *blue pointer to a blue color buffer
+ * @param[out] *clear pointer to a clear color buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed

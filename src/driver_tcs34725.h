@@ -187,56 +187,56 @@ typedef struct tcs34725_info_s
 
 /**
  * @brief     initialize tcs34725_handle_t structure
- * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] STRUCTURE is tcs34725_handle_t
+ * @param[in] HANDLE pointer to a tcs34725 handle structure
+ * @param[in] STRUCTURE tcs34725_handle_t
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_INIT(HANDLE, STRUCTURE)   memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link iic_init function
- * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] FUC points to an iic_init function address
+ * @param[in] HANDLE pointer to a tcs34725 handle structure
+ * @param[in] FUC pointer to an iic_init function address
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_IIC_INIT(HANDLE, FUC)    (HANDLE)->iic_init = FUC
 
 /**
  * @brief     link iic_deinit function
- * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] FUC points to an iic_deinit function address
+ * @param[in] HANDLE pointer to a tcs34725 handle structure
+ * @param[in] FUC pointer to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_IIC_DEINIT(HANDLE, FUC)  (HANDLE)->iic_deinit = FUC
 
 /**
  * @brief     link iic_read function
- * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] FUC points to an iic_read function address
+ * @param[in] HANDLE pointer to a tcs34725 handle structure
+ * @param[in] FUC pointer to an iic_read function address
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_IIC_READ(HANDLE, FUC)    (HANDLE)->iic_read = FUC
 
 /**
  * @brief     link iic_write function
- * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] FUC points to an iic_write function address
+ * @param[in] HANDLE pointer to a tcs34725 handle structure
+ * @param[in] FUC pointer to an iic_write function address
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_IIC_WRITE(HANDLE, FUC)   (HANDLE)->iic_write = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to a tcs34725 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_DELAY_MS(HANDLE, FUC)    (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to a tcs34725 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to a tcs34725 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_TCS34725_LINK_DEBUG_PRINT(HANDLE, FUC) (HANDLE)->debug_print = FUC
@@ -254,7 +254,7 @@ typedef struct tcs34725_info_s
 
 /**
  * @brief      get chip information
- * @param[out] *info points to a tcs34725 info structure
+ * @param[out] *info pointer to a tcs34725 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -264,7 +264,7 @@ uint8_t tcs34725_info(tcs34725_info_t *info);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to a tcs34725 handle structure
+ * @param[in] *handle pointer to a tcs34725 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic initialization failed
@@ -276,7 +276,7 @@ uint8_t tcs34725_init(tcs34725_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to a tcs34725 handle structure
+ * @param[in] *handle pointer to a tcs34725 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic deinit failed
@@ -288,11 +288,11 @@ uint8_t tcs34725_deinit(tcs34725_handle_t *handle);
 
 /**
  * @brief      read the rgbc data
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *red points to a red color buffer
- * @param[out] *green points to a green color buffer
- * @param[out] *blue points to a blue color buffer
- * @param[out] *clear points to a clear color buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *red pointer to a red color buffer
+ * @param[out] *green pointer to a green color buffer
+ * @param[out] *blue pointer to a blue color buffer
+ * @param[out] *clear pointer to a clear color buffer
  * @return     status code
  *             - 0 success
  *             - 1 read rgbc failed
@@ -304,10 +304,10 @@ uint8_t tcs34725_read_rgbc(tcs34725_handle_t *handle, uint16_t *red, uint16_t *g
 
 /**
  * @brief      read the rgb data
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *red points to a red color buffer
- * @param[out] *green points to a green color buffer
- * @param[out] *blue points to a blue color buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *red pointer to a red color buffer
+ * @param[out] *green pointer to a green color buffer
+ * @param[out] *blue pointer to a blue color buffer
  * @return     status code
  *             - 0 success
  *             - 1 read rgb failed
@@ -319,8 +319,8 @@ uint8_t tcs34725_read_rgb(tcs34725_handle_t *handle, uint16_t *red, uint16_t *gr
 
 /**
  * @brief      read the clear data
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *clear points to a clear color buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *clear pointer to a clear color buffer
  * @return     status code
  *             - 0 success
  *             - 1 read clear failed
@@ -332,8 +332,8 @@ uint8_t tcs34725_read_c(tcs34725_handle_t *handle, uint16_t *clear);
 
 /**
  * @brief     enable or disable the wait time
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set wait failed
@@ -345,8 +345,8 @@ uint8_t tcs34725_set_wait(tcs34725_handle_t *handle, tcs34725_bool_t enable);
 
 /**
  * @brief      get the wait time
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get wait failed
@@ -358,8 +358,8 @@ uint8_t tcs34725_get_wait(tcs34725_handle_t *handle, tcs34725_bool_t *enable);
 
 /**
  * @brief     enable or disable the rgbc adc
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set rgbc failed
@@ -371,8 +371,8 @@ uint8_t tcs34725_set_rgbc(tcs34725_handle_t *handle, tcs34725_bool_t enable);
 
 /**
  * @brief      get the rgbc status
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rgbc failed
@@ -384,8 +384,8 @@ uint8_t tcs34725_get_rgbc(tcs34725_handle_t *handle, tcs34725_bool_t *enable);
 
 /**
  * @brief     enable or disable the power
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set power on failed
@@ -397,8 +397,8 @@ uint8_t tcs34725_set_power_on(tcs34725_handle_t *handle, tcs34725_bool_t enable)
 
 /**
  * @brief      get the power status
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get power on failed
@@ -410,8 +410,8 @@ uint8_t tcs34725_get_power_on(tcs34725_handle_t *handle, tcs34725_bool_t *enable
 
 /**
  * @brief     set the rgbc adc integration time
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] t is the adc integration time
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] t adc integration time
  * @return    status code
  *            - 0 success
  *            - 1 set rgbc integration time failed
@@ -423,8 +423,8 @@ uint8_t tcs34725_set_rgbc_integration_time(tcs34725_handle_t *handle, tcs34725_i
 
 /**
  * @brief      get the rgbc adc integration time
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *t points to an integration time buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *t pointer to an integration time buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rgbc integration time failed
@@ -436,8 +436,8 @@ uint8_t tcs34725_get_rgbc_integration_time(tcs34725_handle_t *handle, tcs34725_i
 
 /**
  * @brief     set the wait time
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] t is the wait time
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] t wait time
  * @return    status code
  *            - 0 success
  *            - 1 set wait time failed
@@ -449,8 +449,8 @@ uint8_t tcs34725_set_wait_time(tcs34725_handle_t *handle, tcs34725_wait_time_t t
 
 /**
  * @brief      get the wait time
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *t points to a wait time buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *t pointer to a wait time buffer
  * @return     status code
  *             - 0 success
  *             - 1 get wait time failed
@@ -462,8 +462,8 @@ uint8_t tcs34725_get_wait_time(tcs34725_handle_t *handle, tcs34725_wait_time_t *
 
 /**
  * @brief     set the adc gain
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] gain is the adc gain
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] gain adc gain
  * @return    status code
  *            - 0 success
  *            - 1 set gain failed
@@ -475,8 +475,8 @@ uint8_t tcs34725_set_gain(tcs34725_handle_t *handle, tcs34725_gain_t gain);
 
 /**
  * @brief      get the adc gain
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *gain points to an adc gain buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *gain pointer to an adc gain buffer
  * @return     status code
  *             - 0 success
  *             - 1 get gain failed
@@ -499,8 +499,8 @@ uint8_t tcs34725_get_gain(tcs34725_handle_t *handle, tcs34725_gain_t *gain);
 
 /**
  * @brief     enable or disable the rgbc interrupt
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set rgbc interrupt failed
@@ -512,8 +512,8 @@ uint8_t tcs34725_set_rgbc_interrupt(tcs34725_handle_t *handle, tcs34725_bool_t e
 
 /**
  * @brief      get the rgbc interrupt
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rgbc interrupt failed
@@ -525,8 +525,8 @@ uint8_t tcs34725_get_rgbc_interrupt(tcs34725_handle_t *handle, tcs34725_bool_t *
 
 /**
  * @brief     set the interrupt mode
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] mode is the interrupt mode
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] mode interrupt mode
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt mode failed
@@ -538,8 +538,8 @@ uint8_t tcs34725_set_interrupt_mode(tcs34725_handle_t *handle, tcs34725_interrup
 
 /**
  * @brief      get the interrupt mode
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *mode points to an interrupt mode buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *mode pointer to an interrupt mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt mode failed
@@ -551,8 +551,8 @@ uint8_t tcs34725_get_interrupt_mode(tcs34725_handle_t *handle, tcs34725_interrup
 
 /**
  * @brief     set the rgbc clear low interrupt threshold
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] threshold is the low interrupt threshold
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] threshold low interrupt threshold
  * @return    status code
  *            - 0 success
  *            - 1 set rgbc clear low interrupt threshold failed
@@ -564,8 +564,8 @@ uint8_t tcs34725_set_rgbc_clear_low_interrupt_threshold(tcs34725_handle_t *handl
 
 /**
  * @brief      get the rgbc clear low interrupt threshold
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *threshold points to a low interrupt threshold buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *threshold pointer to a low interrupt threshold buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rgbc clear low interrupt threshold failed
@@ -577,8 +577,8 @@ uint8_t tcs34725_get_rgbc_clear_low_interrupt_threshold(tcs34725_handle_t *handl
 
 /**
  * @brief     set the rgbc clear high interrupt threshold
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] threshold is the high interrupt threshold
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] threshold high interrupt threshold
  * @return    status code
  *            - 0 success
  *            - 1 set rgbc clear high interrupt threshold failed
@@ -590,8 +590,8 @@ uint8_t tcs34725_set_rgbc_clear_high_interrupt_threshold(tcs34725_handle_t *hand
 
 /**
  * @brief      get the rgbc clear high interrupt threshold
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[out] *threshold points to a high interrupt threshold buffer
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[out] *threshold pointer to a high interrupt threshold buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rgbc clear high interrupt threshold failed
@@ -614,10 +614,10 @@ uint8_t tcs34725_get_rgbc_clear_high_interrupt_threshold(tcs34725_handle_t *hand
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to a tcs34725 handle structure
- * @param[in] reg is the iic register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data buffer length
+ * @param[in] *handle pointer to a tcs34725 handle structure
+ * @param[in] reg iic register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data buffer length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -629,10 +629,10 @@ uint8_t tcs34725_set_reg(tcs34725_handle_t *handle, uint8_t reg, uint8_t *buf, u
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to a tcs34725 handle structure
- * @param[in]  reg is the iic register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data buffer length
+ * @param[in]  *handle pointer to a tcs34725 handle structure
+ * @param[in]  reg iic register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data buffer length
  * @return     status code
  *             - 0 success
  *             - 1 read failed

@@ -51,10 +51,10 @@ extern "C"{
 
 /**
  * @brief     interrupt test
- * @param[in] mode is the interrupt mode
- * @param[in] clear_low_threshold is the clear channel low threshold
- * @param[in] clear_high_threshold is the clear channel high threshold
- * @param[in] times is the test times
+ * @param[in] mode interrupt mode
+ * @param[in] clear_low_threshold clear channel low threshold
+ * @param[in] clear_high_threshold clear channel high threshold
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 test failed
